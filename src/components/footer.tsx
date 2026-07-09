@@ -26,6 +26,16 @@ export function Footer() {
             </a>
             {" "}oleh Jon Yablonski
           </p>
+          <p>
+            <a
+              href="https://github.com/alimakhsan/laws-of-ux-id"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline underline-offset-4 hover:text-foreground transition-colors"
+            >
+              Kontribusi di GitHub
+            </a>
+          </p>
           <p className="text-xs">
             Dilisensikan di bawah{" "}
             <a

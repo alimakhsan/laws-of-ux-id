@@ -4,6 +4,8 @@ Kumpulan prinsip-prinsip UX yang perlu dipertimbangkan desainer saat membuat
 antarmuka pengguna — dijelaskan dalam **Bahasa Indonesia** dengan contoh-contoh
 yang mudah dipahami.
 
+🔗 **Live**: [lawsofuxid.netlify.app](https://lawsofuxid.netlify.app)
+
 Terinspirasi dari [lawsofux.com](https://lawsofux.com) oleh Jon Yablonski.
 
 ## Teknologi
