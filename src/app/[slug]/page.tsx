@@ -41,11 +41,6 @@ export default async function LawPage({
         <BackButton />
       </div>
 
-      <div
-        className="animate-enter h-1.5 w-16 rounded-full mb-6"
-        style={{ backgroundColor: law.color, "--stagger": 1 } as React.CSSProperties}
-      />
-
       <span
         className="animate-enter text-sm font-mono text-muted-foreground tabular-nums"
         style={{ "--stagger": 2 } as React.CSSProperties}
@@ -94,6 +89,22 @@ export default async function LawPage({
             >
               {block.text}
             </p>
+          ) : block.type === "youtube" ? (
+            <figure
+              key={i}
+              className="animate-enter-scale my-8"
+              style={{ "--stagger": Math.min(7 + i, 12) } as React.CSSProperties}
+            >
+              <div className="relative aspect-video overflow-hidden rounded-xl bg-muted/30">
+                <iframe
+                  src={`https://www.youtube-nocookie.com/embed/${block.videoId}`}
+                  title={block.title ?? "Video"}
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  className="absolute inset-0 h-full w-full border-0"
+                />
+              </div>
+            </figure>
           ) : (
             <figure
               key={i}
