@@ -429,7 +429,6 @@ const lawList: Law[] = [
     person: "Masaaki Kurosu & Kaori Kashimura",
     personDescription: "Peneliti di Hitachi Design Center",
     blocks: [
-      img("aesthetic-usability-effect", 1, "Ilustrasi konsep Aesthetic-Usability Effect", "Ilustrasi konsep Aesthetic-Usability Effect dari Laws of UX.", 1024, 538),
       t("Fenomena ini pertama kali diteliti oleh Masaaki Kurosu dan Kaori Kashimura dari Hitachi pada tahun 1995. Mereka menguji 26 variasi desain ATM dan menemukan bahwa desain yang lebih menarik secara visual dinilai lebih mudah digunakan oleh peserta, walaupun secara fungsional sama."),
       t("Gampangnya gini: kalau kamu masuk ke dua toko yang jual barang sama persis, satu tokonya rapi dan terang, satunya lagi berantakan dan gelap, kamu pasti bakal ngerasa lebih nyaman belanja di toko yang rapi, kan? Bahkan kamu mungkin ngerasa tokonya lebih bagus pelayanannya, padahal belum tentu."),
       t("Di dunia UI dan UX, efek ini punya dampak yang signifikan. Desain yang estetis menciptakan respons emosional positif di otak user. Respons positif ini bikin user lebih toleran terhadap masalah kecil yang mungkin ada di produk."),
@@ -455,7 +454,6 @@ const lawList: Law[] = [
     person: "Walter J. Doherty & Ahrvind J. Thadani",
     personDescription: "Peneliti di IBM",
     blocks: [
-      img("doherty-threshold", 1, "Ilustrasi konsep Doherty Threshold", "Ilustrasi konsep Doherty Threshold dari Laws of UX.", 1024, 538),
       t("Pada tahun 1982, Walter Doherty dan Ahrvind Thadani dari IBM mempublikasikan paper yang menunjukkan bahwa response time komputer yang di bawah 400 milidetik (0.4 detik) secara drastis meningkatkan produktivitas user."),
       t("Kenapa 400 milidetik? Karena itu batas dimana user masih merasa interaksinya \"instan.\" Begitu lewat dari angka itu, otak kita mulai sadar ada jeda. Dan jeda itu bikin kita kehilangan fokus."),
       t("Coba bayangin lagi ngetik di Google dan hasilnya muncul sebelum kamu selesai ngetik. Rasanya enak banget kan? Sekarang bayangin setiap kali ngetik satu huruf harus nunggu 2 detik. Pasti langsung males."),
@@ -482,7 +480,6 @@ const lawList: Law[] = [
     person: "Clark Hull",
     personDescription: "Psikolog Behavioris",
     blocks: [
-      img("goal-gradient-effect", 1, "Ilustrasi konsep Goal-Gradient Effect", "Ilustrasi konsep Goal-Gradient Effect dari Laws of UX.", 1024, 538),
       t("Efek ini pertama kali diteliti oleh Clark Hull pada tahun 1934 melalui eksperimen dengan tikus di labirin. Tikus-tikus itu berlari semakin cepat saat mereka semakin dekat dengan makanan di ujung labirin."),
       t("Dan ternyata manusia juga sama! Pernah ikut program stamp di kedai kopi? Kalau kartunya udah terisi 8 dari 10 stamp, kamu pasti lebih semangat beli kopi lagi biar cepet dapet gratisan. Tapi kalau baru 2 dari 10? Males banget rasanya."),
       t("Ada eksperimen menarik soal ini. Dua kelompok orang dikasih kartu stamp kopi. Kelompok pertama dapet kartu 10 kotak, kosong semua. Kelompok kedua dapet kartu 12 kotak, tapi 2 udah diisi. Keduanya butuh 10 stamp lagi. Hasilnya? Kelompok kedua menyelesaikan kartu mereka lebih cepat, karena mereka merasa sudah \"lebih dekat\" ke tujuan."),
@@ -509,7 +506,6 @@ const lawList: Law[] = [
     person: "William of Ockham",
     personDescription: "Friar dan Filsuf dari Inggris, abad ke-14",
     blocks: [
-      img("occams-razor", 1, "Ilustrasi konsep Occam's Razor", "Ilustrasi konsep Occam's Razor dari Laws of UX.", 1024, 538),
       t("Prinsip ini berasal dari William of Ockham, seorang filsuf abad ke-14. Intinya sederhana: kalau ada dua penjelasan untuk sesuatu, pilih yang lebih simpel."),
       t("Contoh di dunia nyata: kamu bangun pagi dan lantai dapur basah. Ada dua kemungkinan: (1) keran bocor, atau (2) semalam ada pencuri masuk lewat jendela, menumpahkan air, lalu pergi tanpa mencuri apapun. Menurut Occam's Razor, kemungkinan pertama jauh lebih masuk akal karena asumsinya lebih sedikit."),
       t("Di dunia desain, Occam's Razor mengajarkan kita untuk memilih solusi yang paling sederhana yang bisa menyelesaikan masalah. Bukan berarti desain harus minimalis ya, tapi setiap elemen yang ada harus punya alasan."),
@@ -535,7 +531,6 @@ const lawList: Law[] = [
     person: "Daniel Kahneman",
     personDescription: "Psikolog dan Pemenang Nobel Ekonomi",
     blocks: [
-      img("peak-end-rule", 1, "Ilustrasi konsep Peak-End Rule", "Ilustrasi konsep Peak-End Rule dari Laws of UX.", 1024, 538),
       t("Daniel Kahneman, psikolog yang memenangkan Nobel Ekonomi, menemukan bahwa ingatan kita tentang sebuah pengalaman ditentukan oleh dua momen: puncak emosional (baik positif maupun negatif) dan momen terakhir."),
       t("Contoh klasiknya: pernah liburan selama seminggu dan semuanya biasa aja, tapi di hari terakhir kamu naik roller coaster yang seru banget? Kamu bakal inget liburan itu sebagai liburan yang \"amazing.\" Sebaliknya, kalau semua hari seru tapi di hari terakhir kopermu hilang, kamu bakal inget liburan itu sebagai pengalaman yang buruk."),
       t("Di dunia UI dan UX, Peak-End Rule ini punya implikasi yang sangat besar. Momen paling menyenangkan dan momen terakhir dari pengalaman user itu yang bakal mereka inget dan ceritain ke orang lain."),
@@ -561,7 +556,6 @@ const lawList: Law[] = [
     person: "Jon Postel",
     personDescription: "Ilmuwan Komputer, dikenal juga sebagai Robustness Principle",
     blocks: [
-      img("postels-law", 1, "Ilustrasi konsep Postel's Law", "Ilustrasi konsep Postel's Law dari Laws of UX.", 1024, 538),
       t("Prinsip ini awalnya berasal dari dunia networking, khususnya protokol TCP. Jon Postel menulis bahwa implementasi TCP harus liberal dalam menerima data dari sumber lain (toleran terhadap variasi format), tapi konservatif dalam mengirim data (selalu ikuti standar yang ketat)."),
       t("Tapi prinsip ini ternyata sangat relevan untuk desain UI dan UX. Intinya: terimalah berbagai macam input dari user, tapi berikan output yang konsisten dan rapi."),
       t("Contoh paling gampang: form nomor telepon. User bisa ketik \"08787654321\", \"0878-765-4321\", \"+62878-765-4321\", atau \"0878 765 4321\". Sistem yang baik menerima semua format ini dan secara internal menyimpannya dalam satu format yang konsisten. Jangan paksa user ngikutin format yang kaku."),
@@ -588,7 +582,6 @@ const lawList: Law[] = [
     person: "Stephen Palmer",
     personDescription: "Gestalt Psychology",
     blocks: [
-      img("law-of-common-region", 1, "Ilustrasi konsep Law of Common Region", "Ilustrasi konsep Law of Common Region dari Laws of UX.", 1024, 538),
       t("Ini masih satu keluarga dengan prinsip Gestalt lainnya seperti Proximity dan Similarity. Bedanya, Law of Common Region ini fokus pada bagaimana batasan visual (seperti border, background color, atau shape) membuat elemen-elemen di dalamnya terlihat sebagai satu kelompok."),
       t("Contoh paling simpel di dunia nyata: lapangan sepakbola. Garis-garis putih di lapangan membagi area menjadi beberapa zona: area penalti, lingkaran tengah, dll. Pemain dan penonton langsung paham bahwa area di dalam garis itu punya fungsi yang berbeda dari area di luarnya."),
       t("Di dunia UI dan UX, Law of Common Region ini sangat sering dipakai. Card component adalah contoh paling umum. Sebuah card dengan border atau background tertentu langsung membuat semua elemen di dalamnya (judul, gambar, deskripsi, tombol) terasa sebagai satu kesatuan."),
@@ -614,7 +607,6 @@ const lawList: Law[] = [
     person: "Stephen Palmer & Irvin Rock",
     personDescription: "Gestalt Psychology",
     blocks: [
-      img("law-of-uniform-connectedness", 1, "Ilustrasi konsep Law of Uniform Connectedness", "Ilustrasi konsep Law of Uniform Connectedness dari Laws of UX.", 1024, 538),
       t("Ini adalah prinsip Gestalt yang bisa dibilang paling kuat dalam mengelompokkan elemen. Bahkan lebih kuat dari Proximity, Similarity, dan Common Region. Kalau dua elemen dihubungkan oleh garis, warna, atau bentuk visual lainnya, otak kita langsung menganggap mereka satu kelompok."),
       t("Contoh paling gampang di dunia nyata: peta kereta atau MRT. Stasiun-stasiun yang dihubungkan oleh garis yang sama dianggap berada di jalur yang sama. Warna garisnya beda-beda untuk menunjukkan jalur yang berbeda. Tanpa garis penghubung itu, kita cuma lihat titik-titik acak di peta."),
       t("Di dunia UI dan UX, prinsip ini dipakai di banyak tempat. Stepper atau wizard flow misalnya, langkah-langkah yang dihubungkan oleh garis menunjukkan urutan proses. User langsung paham bahwa step 1, 2, 3 itu berurutan dan saling berkaitan."),
@@ -641,7 +633,6 @@ const lawList: Law[] = [
     person: "Sheena Iyengar & Mark Lepper",
     personDescription: "Psikolog, dikenal lewat eksperimen selai yang terkenal",
     blocks: [
-      img("choice-overload", 1, "Ilustrasi konsep Choice Overload", "Ilustrasi konsep Choice Overload dari Laws of UX.", 1024, 538),
       t("Ini mirip dengan Hick's Law, tapi lebih spesifik tentang dampak psikologis dari terlalu banyak pilihan. Sheena Iyengar melakukan eksperimen terkenal di sebuah supermarket. Mereka menaruh booth selai, satu hari menampilkan 24 varian, hari lain cuma 6 varian."),
       t("Hasilnya? Booth dengan 24 varian memang menarik lebih banyak orang untuk mampir. Tapi dari yang mampir, cuma 3% yang akhirnya beli. Sedangkan booth dengan 6 varian, 30% pengunjung melakukan pembelian. Sepuluh kali lipat!"),
       t("Kenapa bisa begitu? Karena ketika dihadapkan dengan terlalu banyak pilihan, otak kita mengalami \"decision paralysis.\" Kita takut salah pilih, jadi memilih untuk tidak memilih sama sekali."),
@@ -667,7 +658,6 @@ const lawList: Law[] = [
     person: "George A. Miller",
     personDescription: "Psikolog Kognitif, berkaitan erat dengan Miller's Law",
     blocks: [
-      img("chunking", 1, "Ilustrasi konsep Chunking", "Ilustrasi konsep Chunking dari Laws of UX.", 1024, 538),
       t("Chunking itu sebenarnya teknik di balik Miller's Law. Kalau Miller's Law bilang kita cuma bisa ingat 7±2 item, Chunking adalah cara untuk \"mengakali\" batasan itu dengan mengelompokkan informasi menjadi potongan-potongan (chunks) yang lebih mudah diingat."),
       t("Contoh paling gampang: nomor kartu kredit. Kalau ditulis \"4532015112830366\", susah banget diinget. Tapi kalau ditulis \"4532-0151-1283-0366\", jauh lebih mudah karena dipecah jadi 4 chunk yang masing-masing berisi 4 angka."),
       t("Di kehidupan sehari-hari kita sering pakai Chunking tanpa sadar. Nomor HP, kode pos, plat nomor kendaraan, semuanya di-chunk biar mudah diingat dan dikomunikasikan."),
@@ -694,7 +684,6 @@ const lawList: Law[] = [
     person: "Amos Tversky & Daniel Kahneman",
     personDescription: "Psikolog dan Peneliti",
     blocks: [
-      img("cognitive-bias", 1, "Ilustrasi konsep Cognitive Bias", "Ilustrasi konsep Cognitive Bias dari Laws of UX.", 1024, 538),
       t("Cognitive Bias itu bukan satu hukum tunggal, tapi kumpulan \"jalan pintas\" yang diambil otak kita saat memproses informasi. Jalan pintas ini kadang membantu (biar kita bisa ambil keputusan cepat), tapi sering kali bikin kita salah menilai sesuatu."),
       t("Ada banyak sekali jenis Cognitive Bias, tapi beberapa yang paling relevan untuk desain:"),
       t("Anchoring Bias: kita terlalu bergantung pada informasi pertama yang kita lihat. Makanya halaman pricing sering naruh paket paling mahal di sebelah kiri. Setelah lihat harga Rp 5 juta, paket Rp 1 juta terasa murah, padahal mungkin tetap kemahalan."),
@@ -722,7 +711,6 @@ const lawList: Law[] = [
     person: "John Sweller",
     personDescription: "Psikolog Pendidikan",
     blocks: [
-      img("cognitive-load", 1, "Ilustrasi konsep Cognitive Load", "Ilustrasi konsep Cognitive Load dari Laws of UX.", 1024, 538),
       t("Bayangin otak kamu kayak RAM komputer. Ada batas berapa banyak \"program\" yang bisa jalan bersamaan. Kalau terlalu banyak, semuanya jadi lemot. Nah, Cognitive Load itu ngukur seberapa \"penuh\" RAM otak kamu saat mengerjakan sesuatu."),
       t("Ada tiga jenis Cognitive Load menurut John Sweller:"),
       t("Intrinsic Load: beban dari kompleksitas materi itu sendiri. Belajar kalkulus pasti lebih berat dari belajar penjumlahan. Ini sulit diubah karena memang materinya yang kompleks."),
@@ -750,7 +738,6 @@ const lawList: Law[] = [
     person: "Mihaly Csikszentmihalyi",
     personDescription: "Psikolog Positif asal Hungaria-Amerika",
     blocks: [
-      img("flow", 1, "Ilustrasi konsep Flow", "Ilustrasi konsep Flow dari Laws of UX.", 1024, 538),
       t("Pernah ngoding atau main game sampai ga sadar udah lewat 3 jam? Itu namanya Flow state. Mihaly Csikszentmihalyi (bacanya: \"chick-sent-me-hi\") mendefinisikan Flow sebagai keadaan dimana seseorang sepenuhnya tenggelam dalam aktivitas, kehilangan jejak waktu, dan merasa sangat produktif."),
       t("Flow terjadi ketika ada keseimbangan antara tantangan dan kemampuan. Kalau tantangannya terlalu mudah, kita bosan. Kalau terlalu sulit, kita frustasi. Sweet spot di tengah-tengah itulah yang menciptakan Flow."),
       t("Di dunia UI dan UX, menciptakan kondisi Flow itu penting banget, terutama untuk aplikasi produktivitas, game, dan tools kreatif. Beberapa hal yang bisa mendukung Flow:"),
@@ -778,7 +765,6 @@ const lawList: Law[] = [
     person: "Kenneth Craik",
     personDescription: "Psikolog asal Skotlandia",
     blocks: [
-      img("mental-model", 1, "Ilustrasi konsep Mental Model", "Ilustrasi konsep Mental Model dari Laws of UX.", 1024, 538),
       t("Mental Model itu kayak \"peta\" di kepala kita tentang bagaimana sesuatu seharusnya bekerja. Kita semua punya mental model, tentang cara kerja pintu, cara pakai lift, cara belanja online, dll. Mental model ini terbentuk dari pengalaman kita sebelumnya."),
       t("Contoh simpel: kamu lihat gagang pintu yang bentuknya kayak pegangan. Mental model kamu bilang \"ini harus ditarik.\" Tapi ternyata pintunya harus didorong. Frustasi kan? Itu karena desainnya ga sesuai mental model kamu. (Ini juga dikenal sebagai \"Norman Door\", pintu yang desainnya membingungkan.)"),
       t("Di dunia UI dan UX, Mental Model sangat penting. User datang ke aplikasi kamu dengan mental model yang sudah terbentuk dari pengalaman mereka pakai aplikasi lain. Keranjang belanja harus ada di pojok kanan atas (karena hampir semua ecommerce naruhnya di situ). Logo harus bisa diklik buat balik ke homepage. Swipe kiri untuk hapus."),
@@ -805,7 +791,6 @@ const lawList: Law[] = [
     person: "John M. Carroll & Mary Beth Rosson",
     personDescription: "Peneliti di IBM",
     blocks: [
-      img("paradox-of-the-active-user", 1, "Ilustrasi konsep Paradox of the Active User", "Ilustrasi konsep Paradox of the Active User dari Laws of UX.", 1024, 538),
       t("Pernah beli gadget baru dan langsung nyalain tanpa baca buku manualnya? Atau install aplikasi baru dan langsung klik-klik tanpa baca onboarding-nya? Kamu bukan sendiri, hampir semua orang begitu. Dan itulah Paradox of the Active User."),
       t("\"Paradox\" nya adalah: user sebenarnya akan lebih efisien kalau mereka berhenti sebentar untuk belajar dulu. Tapi mereka memilih untuk langsung \"nyebur\" karena mereka merasa sudah cukup tau, atau karena mereka ga sabar ingin langsung mulai."),
       t("Ini punya implikasi besar untuk desain:"),
@@ -833,7 +818,6 @@ const lawList: Law[] = [
     person: "Donald Broadbent",
     personDescription: "Psikolog Kognitif asal Inggris",
     blocks: [
-      img("selective-attention", 1, "Ilustrasi konsep Selective Attention", "Ilustrasi konsep Selective Attention dari Laws of UX.", 1024, 538),
       t("Otak kita setiap detiknya menerima jutaan informasi dari mata, telinga, hidung, dan indera lainnya. Tapi kita ga bisa memproses semuanya sekaligus. Selective Attention adalah mekanisme otak untuk \"menyaring\" dan hanya fokus pada apa yang dianggap penting."),
       t("Eksperimen paling terkenal tentang ini adalah \"Invisible Gorilla\" oleh Daniel Simons dan Christopher Chabris. Peserta diminta menghitung berapa kali bola basket di-passing. Di tengah video, ada orang pakai kostum gorila jalan lewat. Setengah dari peserta sama sekali tidak melihat gorila itu karena fokus mereka ada di bola basket!"),
       t("Di dunia UI dan UX, Selective Attention ini punya dampak besar. User yang fokus pada satu task bisa sama sekali tidak melihat elemen lain di halaman, meskipun elemen itu cukup besar dan mencolok."),
@@ -860,7 +844,6 @@ const lawList: Law[] = [
     person: "Alan Baddeley & Graham Hitch",
     personDescription: "Psikolog Kognitif",
     blocks: [
-      img("working-memory", 1, "Ilustrasi konsep Working Memory", "Ilustrasi konsep Working Memory dari Laws of UX.", 1024, 538),
       t("Working Memory itu ibarat meja kerja di otak kamu. Ukurannya terbatas, kamu cuma bisa naruh beberapa \"berkas\" di atasnya sekaligus. Kalau mejanya penuh, berkas yang lama harus disingkirin dulu sebelum bisa naruh yang baru. Ini berbeda dengan long-term memory yang kayak lemari arsip, kapasitasnya besar tapi butuh waktu untuk nyari dan ngambil sesuatu."),
       t("Alan Baddeley dan Graham Hitch mengusulkan model Working Memory yang terdiri dari beberapa komponen: Phonological Loop (untuk informasi suara/bahasa), Visuospatial Sketchpad (untuk informasi visual/spasial), dan Central Executive (yang mengatur semuanya)."),
       t("Kenapa ini penting untuk desain? Karena setiap interaksi user dengan produk digital itu melibatkan Working Memory. Setiap form field yang harus diisi, setiap langkah yang harus diingat, setiap informasi dari halaman sebelumnya yang masih dibutuhkan, semuanya menempati Working Memory."),
