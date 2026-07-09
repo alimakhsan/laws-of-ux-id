@@ -126,5 +126,67 @@
   }
   html {
     @apply font-sans;
+    scroll-behavior: smooth;
   }
+}
+
+@keyframes enter {
+  from {
+    opacity: 0;
+    filter: blur(6px);
+    transform: translateY(12px);
+  }
+}
+
+@keyframes enter-scale {
+  from {
+    opacity: 0;
+    filter: blur(4px);
+    transform: scale(0.96) translateY(8px);
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+}
+
+@keyframes slide-in-left {
+  from {
+    opacity: 0;
+    transform: translateX(-8px);
+  }
+}
+
+.animate-enter {
+  animation: enter 0.6s both cubic-bezier(0.16, 1, 0.3, 1);
+  animation-delay: calc(var(--stagger, 0) * 80ms);
+}
+
+.animate-enter-scale {
+  animation: enter-scale 0.5s both cubic-bezier(0.16, 1, 0.3, 1);
+  animation-delay: calc(var(--stagger, 0) * 80ms);
+}
+
+.animate-fade-in {
+  animation: fade-in 0.4s both ease-out;
+  animation-delay: calc(var(--stagger, 0) * 60ms);
+}
+
+.img-outline {
+  outline: 1px solid rgba(0, 0, 0, 0.1);
+  outline-offset: -1px;
+}
+
+.dark .img-outline {
+  outline-color: rgba(255, 255, 255, 0.1);
+}
+
+::view-transition-old(root) {
+  animation: fade-in 0.2s ease reverse both;
+}
+
+::view-transition-new(root) {
+  animation: fade-in 0.3s ease both;
 }

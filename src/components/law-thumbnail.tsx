@@ -16,7 +16,7 @@ export function LawThumbnail({
 
   return (
     <div
-      className="relative aspect-square w-full overflow-hidden flex items-center justify-center"
+      className="relative aspect-square w-full overflow-hidden flex items-center justify-center img-outline"
       style={{ backgroundColor: color }}
     >
       {hasImage ? (
@@ -25,7 +25,7 @@ export function LawThumbnail({
           alt={title}
           width={562}
           height={562}
-          className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+          className="h-full w-full object-cover transition-transform duration-500 ease-out group-hover:scale-105"
           sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
           onError={() => setHasImage(false)}
         />
