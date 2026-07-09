@@ -3,6 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import { laws, getLawBySlug } from "@/lib/laws-data";
+import { BackButton } from "@/components/back-button";
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
 
@@ -15,7 +16,7 @@ export function generateMetadata({ params }: { params: Promise<{ slug: string }>
     const law = getLawBySlug(slug);
     if (!law) return { title: "Not Found" };
     return {
-      title: `${law.title} — Laws of UX ID`,
+      title: `${law.title} · Laws of UX ID`,
       description: law.subtitle,
     };
   });
@@ -36,13 +37,7 @@ export default async function LawPage({
 
   return (
     <article className="mx-auto max-w-2xl px-4 sm:px-6 py-10 sm:py-16">
-      <Link
-        href="/"
-        className="inline-flex items-center gap-1.5 text-sm text-muted-foreground hover:text-foreground transition-colors mb-8"
-      >
-        <ArrowLeft className="h-3.5 w-3.5" />
-        Semua hukum
-      </Link>
+      <BackButton />
 
       <div
         className="h-1.5 w-16 rounded-full mb-6"
@@ -50,7 +45,7 @@ export default async function LawPage({
       />
 
       <span className="text-sm font-mono text-muted-foreground">
-        {String(law.number).padStart(2, "0")} / 13
+        {String(law.number).padStart(2, "0")} / {laws.length}
       </span>
 
       <h1 className="text-3xl sm:text-4xl font-bold tracking-tight mt-2 mb-6">
