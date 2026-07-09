@@ -17,10 +17,14 @@ export function ThemeToggle() {
     <Button
       variant="ghost"
       size="icon"
-      className="h-9 w-9"
+      className="h-9 w-9 transition-transform duration-200 active:scale-90"
       onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
     >
-      {theme === "dark" ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
+      {theme === "dark" ? (
+        <Sun className="h-4 w-4 animate-[enter_0.3s_ease-out_both]" />
+      ) : (
+        <Moon className="h-4 w-4 animate-[enter_0.3s_ease-out_both]" />
+      )}
     </Button>
   );
 }
