@@ -12,6 +12,7 @@ export type ContentBlock =
 export interface Law {
   slug: string;
   number: number;
+  category: "theory" | "psychology";
   title: string;
   subtitle: string;
   color: string;
@@ -40,10 +41,11 @@ const img = (
 
 const t = (text: string): ContentBlock => ({ type: "text", text });
 
-export const laws: Law[] = [
+const lawList: Law[] = [
   {
     slug: "fitts-law",
-    number: 1,
+    number: 7,
+    category: "theory",
     title: "Fitt's Law",
     subtitle:
       "Waktu yang dibutuhkan untuk mencapai target itu tergantung dari jaraknya, dan berbanding terbalik dengan ukuran si target.",
@@ -55,11 +57,11 @@ export const laws: Law[] = [
       t("Yang artinya semakin dekat dan besar ukuran target, kita bisa lebih cepat untuk meraihnya."),
       t("Contohnya kalau di dunia nyata. Ukuran pedal rem mobil itu ukurannya lebih besar daripada pedal untuk ngegas, hal tersebut membantu pengemudi lebih cepat ngerem kalau terjadi apa-apa. Sama halnya dengan ukuran tombol \"off\" pada mesin industri yang lebih besar daripada tombol \"on\". Orang jadi lebih cepat untuk mematikan mesin kalau terjadi sesuatu yang berbahaya, dan mengurangi risiko menyalakan mesin tiba-tiba."),
       t("Sekarang Fitt's Law lebih sering dipakai untuk desain UI dan UX. Efeknya kalau kalian lihat, banyak tombol yang dibikin gede biar mudah dan cepat diraih, terutama untuk di mobile. Ditambah, gedenya tombol dapat ngurangin kemungkinan user salah nge-klik atau ngurangin error rates."),
-      img("fitts-law", 1, "Ilustrasi pedal rem dan tombol off/on", "Ini contoh pedal rem dan tombol \"off\"/\"on\" — yang lebih penting dibuat lebih besar.", 1054, 640),
+      img("fitts-law", 1, "Ilustrasi pedal rem dan tombol off/on", "Ini contoh pedal rem dan tombol \"off\"/\"on\", yang lebih penting dibuat lebih besar.", 1054, 640),
       t("Sebagai contohnya di UI dan UX, tombol yang jadi target utama dibuat lebih besar. Sedangkan, link yang ukuran targetnya kecil biasa dipakai untuk interaksi yang jarang digunakan."),
       img("fitts-law", 2, "Contoh tombol target utama lebih besar", "Tombol yang jadi target utama dibuat lebih besar dibanding link.", 1054, 648),
       t("Ini contoh lain, walaupun ukurannya itu ga pas banget (itu saya yang ngukur sendiri). Tapi memperlihatkan kalau yang jadi target utama, ukurannya lebih besar."),
-      img("fitts-law", 3, "Dialog Invite people to project", "Dialog \"Invite people to project\" — tombol utama paling menonjol.", 1054, 1246),
+      img("fitts-law", 3, "Dialog Invite people to project", "Dialog \"Invite people to project\", tombol utama paling menonjol.", 1054, 1246),
     ],
     keyPoints: [
       "Tombol untuk aksi utama harus berukuran lebih besar",
@@ -69,7 +71,8 @@ export const laws: Law[] = [
   },
   {
     slug: "hicks-law",
-    number: 2,
+    number: 10,
+    category: "theory",
     title: "Hick's Law",
     subtitle:
       "Waktu yang dibutuhkan untuk mengambil keputusan meningkat seiring dengan semakin kompleks dan bertambahnya suatu pilihan.",
@@ -80,8 +83,8 @@ export const laws: Law[] = [
     blocks: [
       t("Yang artinya semakin banyak dan semakin kompleks pilihan, maka waktu yang dibutuhkan untuk berpikir akan lebih lama."),
       t("Kalau kalian datang ke restoran kelas atas, biasanya menu makanannya akan lebih mudah untuk digunakan, pelanggan merasa tidak kesulitan untuk milih mau pesen apa."),
-      img("hicks-law", 1, "Menu tanpa Hick's Law", "Menu yang ini ga pake Hick's Law — pilihan banyak dan padat.", 1054, 640),
-      img("hicks-law", 2, "Menu dengan Hick's Law", "Menu yang ini pake Hick's Law — lebih ringkas dan mudah dipilih.", 1054, 640),
+      img("hicks-law", 1, "Menu tanpa Hick's Law", "Menu yang ini ga pake Hick's Law, pilihan banyak dan padat.", 1054, 640),
+      img("hicks-law", 2, "Menu dengan Hick's Law", "Menu yang ini pake Hick's Law, lebih ringkas dan mudah dipilih.", 1054, 640),
       t("Hick's Law ini jangan disalahartikan sebagai aturan untuk ngilangin suatu yang kompleks. Ini jadi alasan kenapa kamera DSLR lebih banyak tombol atau pilihannya daripada kamera yang di hape. Tujuan dari Hick's Law adalah untuk menyederhanakan proses saat ngambil keputusan, bukan mengurangi seluruh proses ya."),
       t("Sebagai contohnya kalau di dunia desain, banyak dipakai di ecommerce. Produk-produk yang banyak itu ga dimunculin sekaligus di websitenya, tapi dimasukin ke dalam berbagai macam kategori. Dan perlahan akan muncul produknya yang lebih spesifik."),
       img("hicks-law", 3, "Home page Amazon", "Contohnya di Home page amazon.com ini.", 1054, 570),
@@ -97,7 +100,8 @@ export const laws: Law[] = [
   },
   {
     slug: "jakobs-law",
-    number: 3,
+    number: 11,
+    category: "theory",
     title: "Jakob's Law",
     subtitle:
       "User itu lebih banyak luangin waktunya di website lain selain punya kita. Alhasil, user lebih memilih website kita bekerja sesuai dengan website lain yang sudah dia tau.",
@@ -108,7 +112,7 @@ export const laws: Law[] = [
     blocks: [
       t("Artinya, user ga mau dikagetkan dengan hal yang baru."),
       t("Contohnya gini di dunia nyata. Kalian datang ke warung nasi padang di suatu tempat, karena kalian udah pernah ke tempat nasi padang sebelumnya, pas datang ke warung nasi padang ini, ekspektasi warung nasi padang akan sama dengan yang sudah pernah kalian datangi. Lauknya dipajang di depan warungnya, mesennya juga sama, dan begitu seterusnya."),
-      img("jakobs-law", 1, "Warung nasi padang", "Ini ekspektasi kita soal warung nasi padang — lauk dipajang di depan.", 1054, 640),
+      img("jakobs-law", 1, "Warung nasi padang", "Ini ekspektasi kita soal warung nasi padang, lauk dipajang di depan.", 1054, 640),
       t("Contoh lain, datang ke ATM, kalian lebih memilih ATM itu bekerja dengan sama dengan ATM lain. Pasti ga pengen kan kalau ATM nya unik gitu, keyboardnya pake QWERTY, atau perintahnya pake suara."),
       t("Sedangkan di dunia UI dan UX jelas Jakob's Law ini sering dikaitkan dengan konsistensi."),
       t("Karena itu, berhati-hati saat mengatakan \"kita coba yang baru di website kita!\". Bisa jadi malah user kita jadi bingung dan parahnya ninggalin website kita."),
@@ -121,7 +125,8 @@ export const laws: Law[] = [
   },
   {
     slug: "law-of-pragnanz",
-    number: 4,
+    number: 14,
+    category: "theory",
     title: "Law of Prägnanz",
     subtitle:
       "Orang akan menerima atau mengartikan sesuatu yang kompleks atau ambigu ke dalam bentuk yang sesederhana mungkin, karena interpretasi yang sederhana itu membutuhkan usaha yang lebih sedikit.",
@@ -133,7 +138,7 @@ export const laws: Law[] = [
     blocks: [
       t("Bisa diartikan dengan kita lebih memilih dan lebih senang yang sederhana, jelas, dan teratur. Yang secara alami memang mata kita lebih memilih menangkap yang sederhana."),
       t("Ini jadi alasan kenapa kita melihat logo WWF seperti panda, padahal itu gabungan dari bentuk-bentuk yang kompleks. Karena mata kita yang menyederhanakan bentuk itu jadi satu bentuk yang saling menyatu."),
-      img("law-of-pragnanz", 1, "Logo WWF panda", "Logo WWF — kita melihatnya sebagai panda, padahal gabungan bentuk yang kompleks.", 1054, 640),
+      img("law-of-pragnanz", 1, "Logo WWF panda", "Logo WWF, kita melihatnya sebagai panda, padahal gabungan bentuk yang kompleks.", 1054, 640),
       t("Contoh lain, lebih mudah mengenali 3 lingkaran hitam yang ditimpa segitiga putih. Dibandingkan kita mengenalinya dengan 3 Pacman hitam."),
       img("law-of-pragnanz", 2, "Segitiga Kanizsa", "Kita melihat segitiga putih di atas 3 lingkaran, bukan 3 Pacman.", 1054, 640),
       t("Di dunia UI dan UX, Prägnanz ini bisa digunakan ketika kita melihat sebuah website. Mata si user akan berusaha mengartikan website yang memang rumit menjadi suatu block yang lebih mudah dimengerti. Ini bagian navigasi, ini bagian filter, dst."),
@@ -148,7 +153,8 @@ export const laws: Law[] = [
   },
   {
     slug: "law-of-proximity",
-    number: 5,
+    number: 13,
+    category: "theory",
     title: "Law of Proximity",
     subtitle:
       "Benda yang berdekatan atau yang terdekat satu sama lain, cenderung berkelompok.",
@@ -161,12 +167,12 @@ export const laws: Law[] = [
       t("Disekitar kita banyak contohnya. Kita akan memahami yang saling berdekatan itu satu kelompok."),
       img("law-of-proximity", 1, "Orang duduk berkelompok di taman", "Orang yang duduk berdekatan terlihat sebagai satu kelompok.", 1054, 640),
       t("Atau seperti menu yang di Google ini."),
-      img("law-of-proximity", 2, "Menu Google", "Menu Google — item dikelompokkan berdasarkan jarak.", 1054, 262),
+      img("law-of-proximity", 2, "Menu Google", "Menu Google, item dikelompokkan berdasarkan jarak.", 1054, 262),
       t("Contoh lain, yang oren terlihat berbaris ke kanan, sedangkan yang biru berbaris ke bawah. Mereka yang lebih dekat akan terlihat berkelompok."),
       img("law-of-proximity", 3, "Titik oren dan biru", "Titik oren berkelompok ke kanan, biru ke bawah.", 1054, 442),
       t("Law of Proximity ini banyak digunakan di UI dan UX, banyak digunakan untuk representasi data, seperti tabel, chart, dan informasi-informasi lainnya."),
       t("Chat WhatsApp ini juga pake proximity. Kamu nyadar ga? Chat dari orang yang sama akan lebih berdekatan."),
-      img("law-of-proximity", 4, "Chat WhatsApp", "Chat WhatsApp — pesan dari orang yang sama saling berdekatan.", 1054, 1786),
+      img("law-of-proximity", 4, "Chat WhatsApp", "Chat WhatsApp, pesan dari orang yang sama saling berdekatan.", 1054, 1786),
       t("Hukum yang sederhana, namun penggunaannya sangat membantu dalam proses mendesain."),
     ],
     keyPoints: [
@@ -177,7 +183,8 @@ export const laws: Law[] = [
   },
   {
     slug: "law-of-similarity",
-    number: 6,
+    number: 15,
+    category: "theory",
     title: "Law of Similarity",
     subtitle:
       "Mata kita cenderung melihat suatu yang sama (warna, bentuk, dll) sebagai satu kesatuan, walaupun benda tersebut terpisah-pisah.",
@@ -204,7 +211,8 @@ export const laws: Law[] = [
   },
   {
     slug: "millers-law",
-    number: 7,
+    number: 18,
+    category: "theory",
     title: "Miller's Law",
     subtitle: "Rata-rata kita hanya bisa mengingat 7 (±2) item di kepala kita.",
     color: "hsl(0, 73%, 41%)",
@@ -212,7 +220,7 @@ export const laws: Law[] = [
     person: "George Miller",
     personDescription: "Psikolog Kognitif",
     blocks: [
-      t("Kalau saya kasih nomor HP saya seperti di gambar. Nomor yang paling bawah — yang dikelompokkan — menurut Miller's Law akan lebih mudah untuk diingat."),
+      t("Kalau saya kasih nomor HP saya seperti di gambar. Nomor yang paling bawah, yang dikelompokkan, menurut Miller's Law akan lebih mudah untuk diingat."),
       img("millers-law", 1, "Nomor HP dikelompokkan", "Nomor yang dikelompokkan (0878 - 7086 - 70) lebih mudah diingat.", 1054, 640),
       t("Biasanya hukum ini dihubungkan juga dengan hukum yang lain, bisa dengan Hick's Law. Intinya membantu kita agar ingatan tidak terbebani oleh terlalu banyak informasi."),
       t("Perlu diingat, Miller's Law ini digunakan untuk work memory, yaitu ingatan yang berjalan."),
@@ -221,7 +229,7 @@ export const laws: Law[] = [
       t("Kedua, kurangi pilihan untuk user, bisa kita gunakan Hick's Law juga untuk yang satu ini."),
       t("Dan, last but not least, berhati-hatilah menggunakan icon, kadang icon yang sulit dimengerti akan membuat user bingung."),
       t("Ada contohnya di Codecademy, bayangkan kita ikut coursenya sampai 9 step. Angka tersebut melebihi batas work memory kita. Dibagian akhir biasanya Codecademy akan memberikan rangkuman apa aja yang sudah pernah kita pelajari. Hal ini bagus untuk membantu user mengingat kembali dan mengurangi beban informasi yang perlu diingat."),
-      img("millers-law", 2, "Course Codecademy 9 step", "Course di Codecademy dengan 9 step — melebihi batas work memory.", 1054, 640),
+      img("millers-law", 2, "Course Codecademy 9 step", "Course di Codecademy dengan 9 step, melebihi batas work memory.", 1054, 640),
       img("millers-law", 3, "Rangkuman Codecademy", "Di akhir, Codecademy memberi rangkuman apa yang sudah dipelajari.", 1054, 640),
     ],
     keyPoints: [
@@ -232,7 +240,8 @@ export const laws: Law[] = [
   },
   {
     slug: "pareto-principle",
-    number: 8,
+    number: 21,
+    category: "theory",
     title: "Pareto Principle",
     subtitle:
       "Di banyak kejadian, sekitar 80% akibat/efek/kejadian berasal dari 20% sebab/asal mula/sumber.",
@@ -247,7 +256,7 @@ export const laws: Law[] = [
       t("Sebagai contoh: Microsoft menyadari dengan memperbaiki 20% bug teratas yang ada, 80% error dan crash yang ada dapat teratasi. Sebanyak 10% pengguna hp menggunakan 90% dari wireless bandwidth. Sebanyak 20% dari penduduk U.S, terdapat 68% orang yang membayar pajak."),
       t("Pareto Principle ini dapat membuka mata kita ketika melihat fitur pada sebuah aplikasi. Kasarnya 20% dari fitur yang dianggap penting dapat meningkatkan experience dari 80% pengguna."),
       t("Tapi jangan dipaksakan harus 20% dan 80% ya. Prinsip ini hanya memberikan gambaran bahwa jika kalian fokus pada fitur tertentu, dapat meningkatkan sebagian besar experience yang ada."),
-      img("pareto-principle", 1, "Diagram 20% effort 80% results", "Prinsip 80/20 — 20% usaha menghasilkan 80% hasil.", 1054, 780),
+      img("pareto-principle", 1, "Diagram 20% effort 80% results", "Prinsip 80/20: 20% usaha menghasilkan 80% hasil.", 1054, 780),
     ],
     keyPoints: [
       "Fokus pada 20% fitur yang memberikan 80% dampak",
@@ -257,7 +266,8 @@ export const laws: Law[] = [
   },
   {
     slug: "parkinsons-law",
-    number: 9,
+    number: 22,
+    category: "theory",
     title: "Parkinson's Law",
     subtitle:
       "Setiap pekerjaan akan mengisi seluruh waktu yang tersedia untuk menyelesaikan pekerjaan tersebut.",
@@ -273,9 +283,9 @@ export const laws: Law[] = [
       img("parkinsons-law", 1, "Lemari baju", "Lemari dengan ruang kosong cenderung kita isi sampai penuh.", 1261, 934),
       t("Parkinson's Law akan berguna saat digunakan dalam mendesain sesuatu yang berhadapan dengan constraint / batasan. Perlu diperhatikan, ga cuma batasan dalam waktu ya. Deadline itu constraint dari waktu, fit itu constraint dari space (ruang), dst."),
       t("Sebagai contoh, pernah pakai Waze? Waze didesain untuk cocok digunakan saat berkendara, dimana waktu dalam menggunakan aplikasi sangat menentukan keselamatan. Saat kita ingin melaporkan apa yang terjadi di jalan, Waze memberikan kita constraint waktu untuk menyelesaikan task tersebut. Di tombol \"later\" nya bakal ada garis yang mengindikasikan waktu. Dan kalau kita tidak mengklik apapun, maka screen tersebut akan close secara otomatis. Time saving dan membiarkan pengemudi fokus nyetir aja!"),
-      img("parkinsons-law", 2, "Aplikasi Waze", "Waze — tombol \"later\" punya garis waktu; layar tertutup otomatis.", 1054, 804),
+      img("parkinsons-law", 2, "Aplikasi Waze", "Waze, tombol \"later\" punya garis waktu; layar tertutup otomatis.", 1054, 804),
       t("Contoh lain pada tombol \"No thanks\" yang ada di gambar di bawah ini."),
-      img("parkinsons-law", 3, "Tombol No thanks", "Contoh lain — tombol \"No thanks\".", 1054, 1054),
+      img("parkinsons-law", 3, "Tombol No thanks", "Contoh lain, tombol \"No thanks\".", 1054, 1054),
     ],
     keyPoints: [
       "Constraint/batasan bisa meningkatkan efisiensi",
@@ -285,7 +295,8 @@ export const laws: Law[] = [
   },
   {
     slug: "serial-position-effect",
-    number: 10,
+    number: 26,
+    category: "theory",
     title: "Serial Position Effect",
     subtitle:
       "User punya kecenderungan mengingat dengan sangat baik benda yang berada di awal dan di akhir di dalam suatu series.",
@@ -306,7 +317,7 @@ export const laws: Law[] = [
       t("Atau, seperti selalu memunculkan counter berapa jumlah item yang sudah ada di cart kita saat belanja online."),
       img("serial-position-effect", 4, "Counter keranjang belanja", "Counter jumlah item di keranjang belanja.", 1054, 748),
       t("Dan last but not least, buat informasi yang ada di awal dan di akhir lebih mencolok. Seperti yang bisa kita liat di website Apple di bawah ini."),
-      img("serial-position-effect", 5, "Bagian awal website Apple", "Website Apple — bagian awal dibuat menonjol.", 1054, 652),
+      img("serial-position-effect", 5, "Bagian awal website Apple", "Website Apple, bagian awal dibuat menonjol.", 1054, 652),
       t("Dimana informasi yang ada di bagian tengah tidak begitu tertarik untuk diingat."),
       img("serial-position-effect", 6, "Bagian tengah website Apple", "Bagian tengah kurang menonjol untuk diingat.", 1054, 724),
       t("Namun, di bagian akhir website memanfaatkan call to action untuk user."),
@@ -320,7 +331,8 @@ export const laws: Law[] = [
   },
   {
     slug: "teslers-law",
-    number: 11,
+    number: 27,
+    category: "theory",
     title: "Tesler's Law",
     subtitle:
       "Dari setiap aplikasi, pasti ada sejumlah kompleksitas yang tidak bisa dikurangi atau dihilangkan.",
@@ -332,13 +344,13 @@ export const laws: Law[] = [
     blocks: [
       t("Jadi jangan salah, kompleksitas juga ga selamanya buruk. Karena bisa jadi, user memang membutuhkan kontrol untuk menjalankan pekerjaannya."),
       t("Seperti contohnya, cockpit pesawat tempat pilot mengemudi. Kontrol dengan banyak pilihan dan kompleksnya informasi diperlukan agar pesawat bisa dikendalikan dengan aman."),
-      img("teslers-law", 1, "Cockpit pesawat", "Cockpit pesawat — kompleksitas kontrol memang dibutuhkan.", 1054, 798),
+      img("teslers-law", 1, "Cockpit pesawat", "Cockpit pesawat, kompleksitas kontrol memang dibutuhkan.", 1054, 798),
       t("Tapi, kita harus pertimbangkan ketika mendesain sebuah aplikasi: Device nya seperti apa, bentuk kegiatan yang dipakai, target usernya siapa, market si device, dan kesan si device."),
       t("Bandingkan saat menggunakan Microsoft Word dan Google Docs. Masing-masing memiliki kompleksitas yang berbeda. Tergantung dari sisi mana pertimbangan saat mendesain aplikasi tersebut."),
-      img("teslers-law", 2, "Microsoft Word", "Microsoft Word — kompleksitas dan kontrol lebih banyak.", 1054, 664),
-      img("teslers-law", 3, "Google Docs", "Google Docs — tampil lebih sederhana.", 1054, 744),
+      img("teslers-law", 2, "Microsoft Word", "Microsoft Word, kompleksitas dan kontrol lebih banyak.", 1054, 664),
+      img("teslers-law", 3, "Google Docs", "Google Docs, tampil lebih sederhana.", 1054, 744),
       t("Kompleksitas yang ada di aplikasi seperti Adobe After Effects mungkin sebagian besar memang dibutuhkan agar user dapat menjalankan pekerjaannya."),
-      img("teslers-law", 4, "Adobe After Effects", "Adobe After Effects — kompleksitas yang sebagian besar memang diperlukan.", 1054, 648),
+      img("teslers-law", 4, "Adobe After Effects", "Adobe After Effects, kompleksitas yang sebagian besar memang diperlukan.", 1054, 648),
       t("Dan yang menjadi pertanyaannya adalah, siapa yang akan berhadapan dengan kompleksitasnya itu: si aplikasi atau si user."),
       t("Terkadang pertimbangan ini perlu dipikirkan oleh Product Manager saat membuat aplikasi, karena sisi manapun yang kita pilih, kompleksitas tidak akan berkurang, hanya berpindah dari aplikasi ke user atau sebaliknya."),
       t("Intinya, tidak peduli mana sisi yang kita pilih, kompleksitas tidak akan berkurang. Dan tugas kita sebagai designer, memastikan user dapat menggunakannya dengan mudah."),
@@ -351,7 +363,8 @@ export const laws: Law[] = [
   },
   {
     slug: "von-restorff-effect",
-    number: 12,
+    number: 28,
+    category: "theory",
     title: "Von Restorff Effect",
     subtitle:
       "Ketika dipaparkan sejumlah objek yang sama, salah satu objek yang berbeda dari yang lain cenderung lebih mudah diingat.",
@@ -379,7 +392,8 @@ export const laws: Law[] = [
   },
   {
     slug: "zeigarnik-effect",
-    number: 13,
+    number: 30,
+    category: "theory",
     title: "Zeigarnik Effect",
     subtitle:
       "Pekerjaan yang belum selesai atau terinterupsi lebih mudah diingat daripada pekerjaan yang selesai.",
@@ -403,7 +417,469 @@ export const laws: Law[] = [
       "Efektif untuk onboarding dan profile completion",
     ],
   },
+  {
+    slug: "aesthetic-usability-effect",
+    number: 1,
+    category: "theory",
+    title: "Aesthetic-Usability Effect",
+    subtitle:
+      "User sering menganggap desain yang lebih estetis itu lebih mudah digunakan dibandingkan yang kurang estetis.",
+    color: "hsl(217, 25%, 42%)",
+    year: "1995",
+    person: "Masaaki Kurosu & Kaori Kashimura",
+    personDescription: "Peneliti di Hitachi Design Center",
+    blocks: [
+      img("aesthetic-usability-effect", 1, "Ilustrasi konsep Aesthetic-Usability Effect", "Ilustrasi konsep Aesthetic-Usability Effect dari Laws of UX.", 1024, 538),
+      t("Fenomena ini pertama kali diteliti oleh Masaaki Kurosu dan Kaori Kashimura dari Hitachi pada tahun 1995. Mereka menguji 26 variasi desain ATM dan menemukan bahwa desain yang lebih menarik secara visual dinilai lebih mudah digunakan oleh peserta, walaupun secara fungsional sama."),
+      t("Gampangnya gini: kalau kamu masuk ke dua toko yang jual barang sama persis, satu tokonya rapi dan terang, satunya lagi berantakan dan gelap, kamu pasti bakal ngerasa lebih nyaman belanja di toko yang rapi, kan? Bahkan kamu mungkin ngerasa tokonya lebih bagus pelayanannya, padahal belum tentu."),
+      t("Di dunia UI dan UX, efek ini punya dampak yang signifikan. Desain yang estetis menciptakan respons emosional positif di otak user. Respons positif ini bikin user lebih toleran terhadap masalah kecil yang mungkin ada di produk."),
+      t("Coba bandingin dua aplikasi to-do list. Yang satu desainnya cantik, warnanya pas, tipografinya enak dibaca. Yang satu lagi fiturnya sama persis tapi tampilannya kayak website tahun 2005. Kebanyakan orang bakal bilang yang pertama lebih \"mudah\" dipakai, padahal fungsionalitasnya identik."),
+      t("Tapi hati-hati, efek ini juga bisa jadi jebakan. Karena user lebih toleran terhadap desain yang cantik, masalah usability yang serius bisa ketutupin. User mungkin ga ngelaporin bug atau kesulitan karena mereka ngerasa \"ini pasti salah saya.\" Makanya, desain yang estetis tetap harus dibarengin dengan usability testing yang serius."),
+      t("Apple adalah contoh klasik dari Aesthetic-Usability Effect. Produk-produk Apple didesain dengan sangat estetis sehingga user cenderung lebih sabar dan toleran terhadap keterbatasan yang ada. Dan ini jadi salah satu kekuatan branding mereka."),
+    ],
+    keyPoints: [
+      "Desain yang estetis membuat user lebih toleran terhadap masalah kecil",
+      "Tampilan visual yang baik menciptakan respons emosional positif",
+      "Estetika tidak boleh menggantikan usability testing yang serius",
+    ],
+  },
+  {
+    slug: "doherty-threshold",
+    number: 6,
+    category: "theory",
+    title: "Doherty Threshold",
+    subtitle:
+      "Produktivitas melonjak ketika komputer dan user berinteraksi dengan kecepatan di bawah 400 milidetik.",
+    color: "hsl(320, 55%, 42%)",
+    year: "1982",
+    person: "Walter J. Doherty & Ahrvind J. Thadani",
+    personDescription: "Peneliti di IBM",
+    blocks: [
+      img("doherty-threshold", 1, "Ilustrasi konsep Doherty Threshold", "Ilustrasi konsep Doherty Threshold dari Laws of UX.", 1024, 538),
+      t("Pada tahun 1982, Walter Doherty dan Ahrvind Thadani dari IBM mempublikasikan paper yang menunjukkan bahwa response time komputer yang di bawah 400 milidetik (0.4 detik) secara drastis meningkatkan produktivitas user."),
+      t("Kenapa 400 milidetik? Karena itu batas dimana user masih merasa interaksinya \"instan.\" Begitu lewat dari angka itu, otak kita mulai sadar ada jeda. Dan jeda itu bikin kita kehilangan fokus."),
+      t("Coba bayangin lagi ngetik di Google dan hasilnya muncul sebelum kamu selesai ngetik. Rasanya enak banget kan? Sekarang bayangin setiap kali ngetik satu huruf harus nunggu 2 detik. Pasti langsung males."),
+      t("Di dunia UI dan UX, Doherty Threshold ini jadi alasan kenapa banyak aplikasi modern pakai teknik-teknik seperti skeleton screen, optimistic UI, atau lazy loading. Intinya, buat user ngerasa semuanya cepat dan responsif."),
+      t("Skeleton screen itu loading state yang memperlihatkan bentuk konten sebelum kontennya beneran muncul. Instagram, Facebook, dan LinkedIn pakai ini. User ngerasa halaman udah \"siap\" walaupun datanya belum sepenuhnya dimuat."),
+      t("Optimistic UI itu teknik dimana aplikasi langsung menunjukkan hasil aksi user sebelum server benar-benar memproses. Contohnya, saat kamu like postingan di Instagram, hatinya langsung merah tanpa nunggu konfirmasi server. Kalau gagal, baru di-rollback."),
+      t("Jadi kalau kamu bikin aplikasi dan response time-nya lambat, jangan cuma pasrah. Cari cara buat bikin user ngerasa cepat, entah itu dengan optimasi backend, caching, atau trik-trik visual loading di atas."),
+    ],
+    keyPoints: [
+      "Response time di bawah 400ms membuat interaksi terasa instan",
+      "Gunakan skeleton screen atau optimistic UI untuk mengurangi persepsi loading",
+      "Kecepatan interaksi langsung mempengaruhi produktivitas user",
+    ],
+  },
+  {
+    slug: "goal-gradient-effect",
+    number: 9,
+    category: "theory",
+    title: "Goal-Gradient Effect",
+    subtitle:
+      "Semakin dekat kita dengan tujuan, usaha yang kita keluarkan untuk mencapainya semakin besar.",
+    color: "hsl(176, 38%, 42%)",
+    year: "1934",
+    person: "Clark Hull",
+    personDescription: "Psikolog Behavioris",
+    blocks: [
+      img("goal-gradient-effect", 1, "Ilustrasi konsep Goal-Gradient Effect", "Ilustrasi konsep Goal-Gradient Effect dari Laws of UX.", 1024, 538),
+      t("Efek ini pertama kali diteliti oleh Clark Hull pada tahun 1934 melalui eksperimen dengan tikus di labirin. Tikus-tikus itu berlari semakin cepat saat mereka semakin dekat dengan makanan di ujung labirin."),
+      t("Dan ternyata manusia juga sama! Pernah ikut program stamp di kedai kopi? Kalau kartunya udah terisi 8 dari 10 stamp, kamu pasti lebih semangat beli kopi lagi biar cepet dapet gratisan. Tapi kalau baru 2 dari 10? Males banget rasanya."),
+      t("Ada eksperimen menarik soal ini. Dua kelompok orang dikasih kartu stamp kopi. Kelompok pertama dapet kartu 10 kotak, kosong semua. Kelompok kedua dapet kartu 12 kotak, tapi 2 udah diisi. Keduanya butuh 10 stamp lagi. Hasilnya? Kelompok kedua menyelesaikan kartu mereka lebih cepat, karena mereka merasa sudah \"lebih dekat\" ke tujuan."),
+      t("Di dunia UI dan UX, Goal-Gradient Effect ini banyak dipakai di onboarding flow dan gamification. Progress bar yang menunjukkan kamu udah selesai 70% dari setup akun bikin kamu lebih semangat ngelengkapin sisanya."),
+      t("Aplikasi fitness kayak Strava atau Nike Run Club juga pakai ini. Saat kamu udah lari 8 km dari target 10 km, notifikasi \"tinggal 2 km lagi!\" bikin kamu push lebih keras."),
+      t("Trik yang sering dipakai designer: mulai progress dari angka yang bukan nol. Misalnya, langkah pertama onboarding udah dicentang otomatis (\"Buat akun ✓\"). Ini bikin user ngerasa udah mulai dan lebih termotivasi untuk lanjut."),
+      t("Tapi ingat, jangan bohongi user dengan progress palsu. Kalau progress bar kamu ga beneran merepresentasikan progres, user bakal ngerasa ditipu dan kehilangan kepercayaan."),
+    ],
+    keyPoints: [
+      "User semakin termotivasi saat merasa dekat dengan tujuan",
+      "Mulai progress dari angka bukan nol untuk meningkatkan motivasi",
+      "Gunakan progress indicator yang jujur dan representatif",
+    ],
+  },
+  {
+    slug: "occams-razor",
+    number: 19,
+    category: "theory",
+    title: "Occam's Razor",
+    subtitle:
+      "Di antara beberapa hipotesis yang bersaing, yang paling sedikit asumsinya biasanya yang benar.",
+    color: "hsl(1, 45%, 47%)",
+    year: "",
+    person: "William of Ockham",
+    personDescription: "Friar dan Filsuf dari Inggris, abad ke-14",
+    blocks: [
+      img("occams-razor", 1, "Ilustrasi konsep Occam's Razor", "Ilustrasi konsep Occam's Razor dari Laws of UX.", 1024, 538),
+      t("Prinsip ini berasal dari William of Ockham, seorang filsuf abad ke-14. Intinya sederhana: kalau ada dua penjelasan untuk sesuatu, pilih yang lebih simpel."),
+      t("Contoh di dunia nyata: kamu bangun pagi dan lantai dapur basah. Ada dua kemungkinan: (1) keran bocor, atau (2) semalam ada pencuri masuk lewat jendela, menumpahkan air, lalu pergi tanpa mencuri apapun. Menurut Occam's Razor, kemungkinan pertama jauh lebih masuk akal karena asumsinya lebih sedikit."),
+      t("Di dunia desain, Occam's Razor mengajarkan kita untuk memilih solusi yang paling sederhana yang bisa menyelesaikan masalah. Bukan berarti desain harus minimalis ya, tapi setiap elemen yang ada harus punya alasan."),
+      t("Kalau kamu bisa menjelaskan sebuah flow dengan 3 langkah, jangan bikin jadi 7 langkah. Kalau sebuah form bisa selesai dengan 4 field, jangan tambahin 10 field \"just in case.\" Setiap tambahan elemen itu menambah beban kognitif user."),
+      t("Google Search adalah contoh terbaik dari penerapan Occam's Razor. Halaman utamanya cuma punya satu input field dan dua tombol. Mereka bisa saja menaruh banyak fitur di halaman utama, tapi mereka memilih solusi paling sederhana: kasih user satu kotak untuk ngetik apa yang mereka cari."),
+      t("Kalau kamu sedang mendesain dan bingung antara beberapa solusi, tanya diri sendiri: \"Mana yang paling sedikit asumsinya tentang user?\" Biasanya jawabannya itu yang paling sederhana."),
+    ],
+    keyPoints: [
+      "Pilih solusi desain yang paling sederhana",
+      "Setiap elemen harus punya alasan yang jelas",
+      "Sederhana bukan berarti minimalis, tapi efisien",
+    ],
+  },
+  {
+    slug: "peak-end-rule",
+    number: 23,
+    category: "theory",
+    title: "Peak-End Rule",
+    subtitle:
+      "Orang menilai suatu pengalaman berdasarkan bagaimana perasaan mereka di puncak (momen paling intens) dan di akhir, bukan berdasarkan rata-rata keseluruhan pengalaman.",
+    color: "hsl(209, 61%, 48%)",
+    year: "1993",
+    person: "Daniel Kahneman",
+    personDescription: "Psikolog dan Pemenang Nobel Ekonomi",
+    blocks: [
+      img("peak-end-rule", 1, "Ilustrasi konsep Peak-End Rule", "Ilustrasi konsep Peak-End Rule dari Laws of UX.", 1024, 538),
+      t("Daniel Kahneman, psikolog yang memenangkan Nobel Ekonomi, menemukan bahwa ingatan kita tentang sebuah pengalaman ditentukan oleh dua momen: puncak emosional (baik positif maupun negatif) dan momen terakhir."),
+      t("Contoh klasiknya: pernah liburan selama seminggu dan semuanya biasa aja, tapi di hari terakhir kamu naik roller coaster yang seru banget? Kamu bakal inget liburan itu sebagai liburan yang \"amazing.\" Sebaliknya, kalau semua hari seru tapi di hari terakhir kopermu hilang, kamu bakal inget liburan itu sebagai pengalaman yang buruk."),
+      t("Di dunia UI dan UX, Peak-End Rule ini punya implikasi yang sangat besar. Momen paling menyenangkan dan momen terakhir dari pengalaman user itu yang bakal mereka inget dan ceritain ke orang lain."),
+      t("Mailchimp paham banget soal ini. Setelah kamu selesai ngirim campaign email (yang prosesnya cukup menegangkan), mereka munculin animasi tangan high-five yang ikonik. Momen akhir yang positif ini bikin user ngerasa seneng dan lega."),
+      t("Checkout flow juga penting banget. Banyak ecommerce yang checkout-nya ribet (momen negatif di akhir), dan itu yang bakal diingat user. Makanya, optimasi checkout flow itu investasi yang sangat worth it, karena itu momen terakhir sebelum user pergi."),
+      t("Jadi, kalau kamu mau user punya kesan positif tentang produkmu, fokus pada dua hal: bikin momen \"wow\" yang memorable, dan pastikan momen terakhir itu menyenangkan. Bahkan kalau di tengah-tengah ada masalah kecil, user cenderung memaafkan kalau ending-nya bagus."),
+    ],
+    keyPoints: [
+      "Fokus pada momen puncak dan momen akhir pengalaman user",
+      "Checkout dan onboarding adalah momen akhir yang krusial",
+      "Momen \"wow\" yang positif bisa menutup kekurangan di bagian lain",
+    ],
+  },
+  {
+    slug: "postels-law",
+    number: 24,
+    category: "theory",
+    title: "Postel's Law",
+    subtitle:
+      "Bersikaplah liberal dalam menerima input, dan konservatif dalam memberikan output.",
+    color: "hsl(129, 39%, 42%)",
+    year: "1980",
+    person: "Jon Postel",
+    personDescription: "Ilmuwan Komputer, dikenal juga sebagai Robustness Principle",
+    blocks: [
+      img("postels-law", 1, "Ilustrasi konsep Postel's Law", "Ilustrasi konsep Postel's Law dari Laws of UX.", 1024, 538),
+      t("Prinsip ini awalnya berasal dari dunia networking, khususnya protokol TCP. Jon Postel menulis bahwa implementasi TCP harus liberal dalam menerima data dari sumber lain (toleran terhadap variasi format), tapi konservatif dalam mengirim data (selalu ikuti standar yang ketat)."),
+      t("Tapi prinsip ini ternyata sangat relevan untuk desain UI dan UX. Intinya: terimalah berbagai macam input dari user, tapi berikan output yang konsisten dan rapi."),
+      t("Contoh paling gampang: form nomor telepon. User bisa ketik \"08787654321\", \"0878-765-4321\", \"+62878-765-4321\", atau \"0878 765 4321\". Sistem yang baik menerima semua format ini dan secara internal menyimpannya dalam satu format yang konsisten. Jangan paksa user ngikutin format yang kaku."),
+      t("Atau coba liat Google Search. Kamu bisa ketik \"restoran padang terdekat\", \"Restoran Padang Terdekat\", atau bahkan \"rstoran padng terdkt\" dengan typo. Google tetap ngerti apa yang kamu maksud. Mereka sangat liberal dalam menerima input."),
+      t("Di sisi output, Google selalu konsisten: hasil pencarian selalu dalam format yang sama, terstruktur, dan mudah dipahami. Inilah yang dimaksud konservatif dalam output."),
+      t("Dalam praktik desain, Postel's Law berarti kita harus meminimalisir error saat user mengisi form. Daripada menolak input dan menampilkan pesan error, lebih baik terima input user lalu format secara otomatis. Kurangi \"red error messages\" sebanyak mungkin."),
+      t("Prinsip ini juga berlaku untuk aksesibilitas. Aplikasi yang baik menerima berbagai cara interaksi (mouse, keyboard, touch, screen reader) dan memberikan output yang konsisten untuk semuanya."),
+    ],
+    keyPoints: [
+      "Terima berbagai format input dari user, format secara otomatis",
+      "Berikan output yang konsisten dan terstruktur",
+      "Minimalkan error messages yang tidak perlu",
+    ],
+  },
+  {
+    slug: "law-of-common-region",
+    number: 12,
+    category: "theory",
+    title: "Law of Common Region",
+    subtitle:
+      "Elemen-elemen yang berada di dalam area yang sama (dibatasi oleh border, warna, atau bentuk) dianggap sebagai satu kelompok.",
+    color: "hsl(154, 62%, 37%)",
+    year: "",
+    person: "Stephen Palmer",
+    personDescription: "Gestalt Psychology",
+    blocks: [
+      img("law-of-common-region", 1, "Ilustrasi konsep Law of Common Region", "Ilustrasi konsep Law of Common Region dari Laws of UX.", 1024, 538),
+      t("Ini masih satu keluarga dengan prinsip Gestalt lainnya seperti Proximity dan Similarity. Bedanya, Law of Common Region ini fokus pada bagaimana batasan visual (seperti border, background color, atau shape) membuat elemen-elemen di dalamnya terlihat sebagai satu kelompok."),
+      t("Contoh paling simpel di dunia nyata: lapangan sepakbola. Garis-garis putih di lapangan membagi area menjadi beberapa zona: area penalti, lingkaran tengah, dll. Pemain dan penonton langsung paham bahwa area di dalam garis itu punya fungsi yang berbeda dari area di luarnya."),
+      t("Di dunia UI dan UX, Law of Common Region ini sangat sering dipakai. Card component adalah contoh paling umum. Sebuah card dengan border atau background tertentu langsung membuat semua elemen di dalamnya (judul, gambar, deskripsi, tombol) terasa sebagai satu kesatuan."),
+      t("Coba perhatiin dashboard manapun seperti Notion, Trello, atau Google Analytics. Mereka semua menggunakan card, panel, dan section dengan background atau border yang berbeda untuk mengelompokkan informasi yang berkaitan. Tanpa batasan visual ini, semua informasi akan terlihat bercampur aduk."),
+      t("Yang menarik, Common Region bisa \"mengalahkan\" Proximity. Dua elemen yang jaraknya berjauhan tapi berada di dalam satu card akan terlihat lebih berkaitan dibanding dua elemen yang berdekatan tapi berada di card yang berbeda."),
+      t("Tips praktis: gunakan background color yang subtle untuk mengelompokkan, jangan terlalu banyak border yang tebal. Dan pastikan hierarki region-nya jelas, jangan bikin region di dalam region di dalam region sampai user bingung."),
+    ],
+    keyPoints: [
+      "Gunakan border atau background untuk mengelompokkan elemen terkait",
+      "Card component adalah implementasi paling umum",
+      "Common Region bisa lebih kuat dari Proximity dalam mengelompokkan elemen",
+    ],
+  },
+  {
+    slug: "law-of-uniform-connectedness",
+    number: 16,
+    category: "theory",
+    title: "Law of Uniform Connectedness",
+    subtitle:
+      "Elemen-elemen yang terhubung secara visual dianggap lebih berkaitan dibandingkan elemen yang tidak terhubung.",
+    color: "hsl(220, 41%, 59%)",
+    year: "",
+    person: "Stephen Palmer & Irvin Rock",
+    personDescription: "Gestalt Psychology",
+    blocks: [
+      img("law-of-uniform-connectedness", 1, "Ilustrasi konsep Law of Uniform Connectedness", "Ilustrasi konsep Law of Uniform Connectedness dari Laws of UX.", 1024, 538),
+      t("Ini adalah prinsip Gestalt yang bisa dibilang paling kuat dalam mengelompokkan elemen. Bahkan lebih kuat dari Proximity, Similarity, dan Common Region. Kalau dua elemen dihubungkan oleh garis, warna, atau bentuk visual lainnya, otak kita langsung menganggap mereka satu kelompok."),
+      t("Contoh paling gampang di dunia nyata: peta kereta atau MRT. Stasiun-stasiun yang dihubungkan oleh garis yang sama dianggap berada di jalur yang sama. Warna garisnya beda-beda untuk menunjukkan jalur yang berbeda. Tanpa garis penghubung itu, kita cuma lihat titik-titik acak di peta."),
+      t("Di dunia UI dan UX, prinsip ini dipakai di banyak tempat. Stepper atau wizard flow misalnya, langkah-langkah yang dihubungkan oleh garis menunjukkan urutan proses. User langsung paham bahwa step 1, 2, 3 itu berurutan dan saling berkaitan."),
+      t("Flowchart dan diagram arsitektur juga bergantung penuh pada prinsip ini. Node-node yang dihubungkan oleh panah atau garis menunjukkan relasi dan alur data."),
+      t("Contoh lain yang lebih subtle: timeline di media sosial. Garis vertikal yang menghubungkan postingan satu dengan lainnya membuat user ngerasa ada koneksi kronologis di antara mereka."),
+      t("Node graph di aplikasi seperti Figma (untuk prototyping) atau Blender (untuk 3D) juga pakai prinsip ini. Koneksi visual antar node membuat relasi yang kompleks jadi mudah dipahami."),
+      t("Jadi kalau kamu perlu menunjukkan relasi antar elemen, cara paling efektif adalah menghubungkannya secara visual, entah dengan garis, panah, warna yang sama, atau border yang menyatu."),
+    ],
+    keyPoints: [
+      "Hubungkan elemen yang berkaitan secara visual (garis, warna, panah)",
+      "Prinsip Gestalt paling kuat untuk mengelompokkan elemen",
+      "Sering dipakai di stepper, flowchart, dan timeline",
+    ],
+  },
+  {
+    slug: "choice-overload",
+    number: 2,
+    category: "theory",
+    title: "Choice Overload",
+    subtitle:
+      "Semakin banyak pilihan yang diberikan, semakin sulit untuk memilih, dan semakin besar kemungkinan untuk tidak memilih sama sekali.",
+    color: "hsl(200, 60%, 40%)",
+    year: "2000",
+    person: "Sheena Iyengar & Mark Lepper",
+    personDescription: "Psikolog, dikenal lewat eksperimen selai yang terkenal",
+    blocks: [
+      img("choice-overload", 1, "Ilustrasi konsep Choice Overload", "Ilustrasi konsep Choice Overload dari Laws of UX.", 1024, 538),
+      t("Ini mirip dengan Hick's Law, tapi lebih spesifik tentang dampak psikologis dari terlalu banyak pilihan. Sheena Iyengar melakukan eksperimen terkenal di sebuah supermarket. Mereka menaruh booth selai, satu hari menampilkan 24 varian, hari lain cuma 6 varian."),
+      t("Hasilnya? Booth dengan 24 varian memang menarik lebih banyak orang untuk mampir. Tapi dari yang mampir, cuma 3% yang akhirnya beli. Sedangkan booth dengan 6 varian, 30% pengunjung melakukan pembelian. Sepuluh kali lipat!"),
+      t("Kenapa bisa begitu? Karena ketika dihadapkan dengan terlalu banyak pilihan, otak kita mengalami \"decision paralysis.\" Kita takut salah pilih, jadi memilih untuk tidak memilih sama sekali."),
+      t("Di dunia UI dan UX, ini sering terjadi di halaman pricing, filter produk, atau settings yang terlalu banyak opsi. Pernah buka halaman Settings di sebuah aplikasi dan langsung close karena opsinya terlalu banyak? Itu Choice Overload."),
+      t("Solusinya bukan menghilangkan pilihan, tapi menyederhanakan presentasinya. Beberapa teknik yang bisa dipakai: berikan rekomendasi default (\"Most Popular\"), gunakan progressive disclosure (tampilkan opsi dasar dulu, advanced options disembunyikan), atau kelompokkan pilihan ke dalam kategori."),
+      t("Netflix menangani jutaan film dan series, tapi mereka tidak menampilkan semuanya sekaligus. Mereka pakai algoritma untuk menampilkan rekomendasi yang dipersonalisasi dan dikelompokkan dalam kategori. Hasilnya, user tetap merasa punya banyak pilihan tanpa merasa overwhelmed."),
+    ],
+    keyPoints: [
+      "Terlalu banyak pilihan menyebabkan decision paralysis",
+      "Berikan default atau rekomendasi untuk membantu user memilih",
+      "Gunakan progressive disclosure untuk menyembunyikan opsi lanjutan",
+    ],
+  },
+  {
+    slug: "chunking",
+    number: 3,
+    category: "psychology",
+    title: "Chunking",
+    subtitle:
+      "Orang cenderung mengingat informasi lebih baik ketika informasi tersebut dikelompokkan menjadi potongan-potongan kecil.",
+    color: "hsl(6, 79%, 59%)",
+    year: "1956",
+    person: "George A. Miller",
+    personDescription: "Psikolog Kognitif, berkaitan erat dengan Miller's Law",
+    blocks: [
+      img("chunking", 1, "Ilustrasi konsep Chunking", "Ilustrasi konsep Chunking dari Laws of UX.", 1024, 538),
+      t("Chunking itu sebenarnya teknik di balik Miller's Law. Kalau Miller's Law bilang kita cuma bisa ingat 7±2 item, Chunking adalah cara untuk \"mengakali\" batasan itu dengan mengelompokkan informasi menjadi potongan-potongan (chunks) yang lebih mudah diingat."),
+      t("Contoh paling gampang: nomor kartu kredit. Kalau ditulis \"4532015112830366\", susah banget diinget. Tapi kalau ditulis \"4532-0151-1283-0366\", jauh lebih mudah karena dipecah jadi 4 chunk yang masing-masing berisi 4 angka."),
+      t("Di kehidupan sehari-hari kita sering pakai Chunking tanpa sadar. Nomor HP, kode pos, plat nomor kendaraan, semuanya di-chunk biar mudah diingat dan dikomunikasikan."),
+      t("Di dunia UI dan UX, Chunking sangat penting untuk menyajikan informasi. Artikel yang dipecah jadi paragraf pendek dengan heading lebih mudah dibaca daripada satu blok teks panjang. Form yang dipecah jadi beberapa step lebih mudah diisi daripada satu form panjang."),
+      t("Dashboard yang baik juga menerapkan Chunking. Daripada menampilkan 50 metrik sekaligus, kelompokkan jadi beberapa section: \"Revenue\", \"Users\", \"Performance.\" Setiap section jadi satu chunk yang mudah dipahami."),
+      t("Bahkan navigasi website juga pakai Chunking. Menu utama biasanya cuma 5-7 item. Kalau lebih, biasanya dipecah jadi sub-menu atau mega menu. Ini semua supaya user ga overwhelmed."),
+      t("Prinsipnya sederhana: kalau informasinya banyak, pecah jadi kelompok kecil yang bermakna. Otak manusia jauh lebih baik dalam memproses beberapa kelompok kecil daripada satu kelompok besar."),
+    ],
+    keyPoints: [
+      "Pecah informasi besar menjadi kelompok-kelompok kecil yang bermakna",
+      "Form panjang lebih baik dipecah jadi beberapa step",
+      "Dashboard dan navigasi harus di-chunk agar mudah dipahami",
+    ],
+  },
+  {
+    slug: "cognitive-bias",
+    number: 4,
+    category: "psychology",
+    title: "Cognitive Bias",
+    subtitle:
+      "Pola sistematis penyimpangan dari norma atau rasionalitas dalam penilaian, di mana individu menciptakan realitas subjektif mereka sendiri.",
+    color: "hsl(209, 61%, 48%)",
+    year: "1972",
+    person: "Amos Tversky & Daniel Kahneman",
+    personDescription: "Psikolog dan Peneliti",
+    blocks: [
+      img("cognitive-bias", 1, "Ilustrasi konsep Cognitive Bias", "Ilustrasi konsep Cognitive Bias dari Laws of UX.", 1024, 538),
+      t("Cognitive Bias itu bukan satu hukum tunggal, tapi kumpulan \"jalan pintas\" yang diambil otak kita saat memproses informasi. Jalan pintas ini kadang membantu (biar kita bisa ambil keputusan cepat), tapi sering kali bikin kita salah menilai sesuatu."),
+      t("Ada banyak sekali jenis Cognitive Bias, tapi beberapa yang paling relevan untuk desain:"),
+      t("Anchoring Bias: kita terlalu bergantung pada informasi pertama yang kita lihat. Makanya halaman pricing sering naruh paket paling mahal di sebelah kiri. Setelah lihat harga Rp 5 juta, paket Rp 1 juta terasa murah, padahal mungkin tetap kemahalan."),
+      t("Confirmation Bias: kita cenderung mencari dan mempercayai informasi yang mendukung apa yang sudah kita percaya. Ini berbahaya saat melakukan user research: kalau kita sudah punya hipotesis, kita bisa tanpa sadar cuma dengerin feedback yang mendukung hipotesis kita."),
+      t("Bandwagon Effect: kita cenderung ikut apa yang dilakukan banyak orang. \"10.000+ orang sudah bergabung!\" atau \"Produk terlaris\", ini semua memanfaatkan Bandwagon Effect."),
+      t("Framing Effect: cara informasi disajikan mempengaruhi keputusan kita. \"90% fat-free\" terasa lebih sehat daripada \"mengandung 10% lemak\", padahal artinya sama persis."),
+      t("Sebagai designer, penting untuk tau Cognitive Bias ini dari dua sisi. Pertama, kita bisa memanfaatkannya untuk mendesain experience yang lebih baik. Kedua, kita harus waspada supaya bias kita sendiri tidak mempengaruhi keputusan desain secara negatif."),
+      t("Dan yang paling penting: jangan memanfaatkan Cognitive Bias untuk menipu user (dark patterns). Gunakan pemahaman ini untuk membantu user mengambil keputusan yang lebih baik, bukan untuk memanipulasi mereka."),
+    ],
+    keyPoints: [
+      "Cognitive Bias adalah jalan pintas otak yang bisa menyesatkan",
+      "Pahami bias untuk mendesain experience yang lebih baik",
+      "Jangan gunakan bias untuk dark patterns, bantu user bukan manipulasi",
+    ],
+  },
+  {
+    slug: "cognitive-load",
+    number: 5,
+    category: "psychology",
+    title: "Cognitive Load",
+    subtitle:
+      "Jumlah total usaha mental yang digunakan di working memory. Semakin banyak beban kognitif, semakin sulit user memproses informasi baru.",
+    color: "hsl(6, 79%, 59%)",
+    year: "1988",
+    person: "John Sweller",
+    personDescription: "Psikolog Pendidikan",
+    blocks: [
+      img("cognitive-load", 1, "Ilustrasi konsep Cognitive Load", "Ilustrasi konsep Cognitive Load dari Laws of UX.", 1024, 538),
+      t("Bayangin otak kamu kayak RAM komputer. Ada batas berapa banyak \"program\" yang bisa jalan bersamaan. Kalau terlalu banyak, semuanya jadi lemot. Nah, Cognitive Load itu ngukur seberapa \"penuh\" RAM otak kamu saat mengerjakan sesuatu."),
+      t("Ada tiga jenis Cognitive Load menurut John Sweller:"),
+      t("Intrinsic Load: beban dari kompleksitas materi itu sendiri. Belajar kalkulus pasti lebih berat dari belajar penjumlahan. Ini sulit diubah karena memang materinya yang kompleks."),
+      t("Extraneous Load: beban dari cara informasi disajikan. Ini yang bisa kita kontrol sebagai designer! Instruksi yang berbelit-belit, layout yang berantakan, navigasi yang membingungkan, semua ini menambah beban yang seharusnya ga perlu ada."),
+      t("Germane Load: beban dari proses belajar itu sendiri. Ini beban yang \"berguna\" karena membantu user membangun pemahaman. Misalnya, saat user pertama kali belajar pakai aplikasi baru."),
+      t("Tugas kita sebagai designer adalah mengurangi Extraneous Load sebanyak mungkin. Caranya: buat layout yang bersih, gunakan hierarki visual yang jelas, hilangkan elemen yang ga perlu, dan jangan paksa user mengingat informasi antar halaman."),
+      t("Contoh konkret: form yang baik menampilkan label di atas input (bukan di dalam input sebagai placeholder yang hilang saat diklik). Kenapa? Karena placeholder yang hilang memaksa user mengingat apa yang seharusnya diisi, itu Extraneous Load yang ga perlu."),
+      t("Prinsip \"Don't Make Me Think\" dari Steve Krug pada dasarnya adalah tentang mengurangi Cognitive Load. Setiap kali user harus berhenti dan berpikir \"ini tombol buat apa ya?\", itu Cognitive Load yang bisa dihindari."),
+    ],
+    keyPoints: [
+      "Kurangi Extraneous Load, yaitu beban dari desain yang buruk",
+      "Layout bersih dan hierarki visual yang jelas mengurangi beban kognitif",
+      "Jangan paksa user mengingat informasi antar halaman atau step",
+    ],
+  },
+  {
+    slug: "flow",
+    number: 8,
+    category: "psychology",
+    title: "Flow",
+    subtitle:
+      "Keadaan mental di mana seseorang tenggelam sepenuhnya dalam suatu aktivitas dengan fokus penuh, keterlibatan total, dan menikmati prosesnya.",
+    color: "hsl(320, 55%, 42%)",
+    year: "1975",
+    person: "Mihaly Csikszentmihalyi",
+    personDescription: "Psikolog Positif asal Hungaria-Amerika",
+    blocks: [
+      img("flow", 1, "Ilustrasi konsep Flow", "Ilustrasi konsep Flow dari Laws of UX.", 1024, 538),
+      t("Pernah ngoding atau main game sampai ga sadar udah lewat 3 jam? Itu namanya Flow state. Mihaly Csikszentmihalyi (bacanya: \"chick-sent-me-hi\") mendefinisikan Flow sebagai keadaan dimana seseorang sepenuhnya tenggelam dalam aktivitas, kehilangan jejak waktu, dan merasa sangat produktif."),
+      t("Flow terjadi ketika ada keseimbangan antara tantangan dan kemampuan. Kalau tantangannya terlalu mudah, kita bosan. Kalau terlalu sulit, kita frustasi. Sweet spot di tengah-tengah itulah yang menciptakan Flow."),
+      t("Di dunia UI dan UX, menciptakan kondisi Flow itu penting banget, terutama untuk aplikasi produktivitas, game, dan tools kreatif. Beberapa hal yang bisa mendukung Flow:"),
+      t("Pertama, berikan feedback yang jelas dan langsung. Saat user melakukan aksi, mereka harus langsung tahu hasilnya. Delay atau ketidakpastian bisa memecah Flow."),
+      t("Kedua, kurangi interupsi. Notifikasi yang muncul tiba-tiba, pop-up yang ga penting, atau dialog konfirmasi yang berlebihan, semua ini memecah Flow state user. Pikirkan baik-baik sebelum menginterupsi user."),
+      t("Ketiga, berikan kontrol yang sesuai. User harus merasa \"in control\" tanpa harus mikir terlalu keras tentang tools yang mereka pakai. Tools yang baik itu terasa seperti perpanjangan dari tangan, bukan hambatan."),
+      t("Aplikasi seperti Notion, Figma, atau VS Code didesain untuk mendukung Flow. Mereka minimalisir gangguan, memberikan shortcut untuk power user, dan feedback-nya instan."),
+      t("Sebaliknya, aplikasi yang sering memecah Flow biasanya punya terlalu banyak pop-up, loading yang lama, atau navigasi yang bikin user \"nyasar.\" Setiap interupsi butuh waktu 23 menit untuk kembali ke Flow state, dan ini berdasarkan penelitian dari University of California, Irvine."),
+    ],
+    keyPoints: [
+      "Flow terjadi saat ada keseimbangan tantangan dan kemampuan",
+      "Kurangi interupsi, setiap gangguan butuh ~23 menit untuk kembali ke Flow",
+      "Berikan feedback langsung dan kontrol yang intuitif",
+    ],
+  },
+  {
+    slug: "mental-model",
+    number: 17,
+    category: "psychology",
+    title: "Mental Model",
+    subtitle:
+      "Representasi internal yang dimiliki seseorang tentang bagaimana sesuatu bekerja di dunia nyata.",
+    color: "hsl(53, 68%, 48%)",
+    year: "1943",
+    person: "Kenneth Craik",
+    personDescription: "Psikolog asal Skotlandia",
+    blocks: [
+      img("mental-model", 1, "Ilustrasi konsep Mental Model", "Ilustrasi konsep Mental Model dari Laws of UX.", 1024, 538),
+      t("Mental Model itu kayak \"peta\" di kepala kita tentang bagaimana sesuatu seharusnya bekerja. Kita semua punya mental model, tentang cara kerja pintu, cara pakai lift, cara belanja online, dll. Mental model ini terbentuk dari pengalaman kita sebelumnya."),
+      t("Contoh simpel: kamu lihat gagang pintu yang bentuknya kayak pegangan. Mental model kamu bilang \"ini harus ditarik.\" Tapi ternyata pintunya harus didorong. Frustasi kan? Itu karena desainnya ga sesuai mental model kamu. (Ini juga dikenal sebagai \"Norman Door\", pintu yang desainnya membingungkan.)"),
+      t("Di dunia UI dan UX, Mental Model sangat penting. User datang ke aplikasi kamu dengan mental model yang sudah terbentuk dari pengalaman mereka pakai aplikasi lain. Keranjang belanja harus ada di pojok kanan atas (karena hampir semua ecommerce naruhnya di situ). Logo harus bisa diklik buat balik ke homepage. Swipe kiri untuk hapus."),
+      t("Masalah muncul ketika mental model designer berbeda dengan mental model user. Designer yang sudah paham sistemnya seringkali mendesain berdasarkan \"system model\", cara kerja sistem secara teknis. Padahal user mikir berdasarkan mental model mereka sendiri."),
+      t("Contoh: developer mungkin mikir \"upload file\" berarti user harus pilih file, tentukan folder tujuan, set permission, lalu klik upload. Tapi mental model user mungkin sesimpel \"seret file ke sini.\" Drag and drop lebih sesuai mental model kebanyakan user."),
+      t("Cara terbaik untuk memahami mental model user? User research. Card sorting, usability testing, dan interview bisa membantu kita memahami bagaimana user mengekspektasikan sesuatu bekerja. Jangan pernah asumsi mental model user sama dengan mental model kita."),
+      t("Dan ini terhubung langsung dengan Jakob's Law, user mengharapkan aplikasi kamu bekerja seperti aplikasi lain yang sudah mereka kenal. Melawan mental model user tanpa alasan kuat sama dengan mengundang frustrasi."),
+    ],
+    keyPoints: [
+      "User datang dengan mental model dari pengalaman sebelumnya",
+      "Desain harus sesuai mental model user, bukan system model developer",
+      "User research membantu memahami mental model user yang sebenarnya",
+    ],
+  },
+  {
+    slug: "paradox-of-the-active-user",
+    number: 20,
+    category: "theory",
+    title: "Paradox of the Active User",
+    subtitle:
+      "User cenderung langsung pakai produk tanpa membaca manual atau instruksi, meskipun membaca instruksi dulu akan lebih efisien.",
+    color: "hsl(50, 44%, 41%)",
+    year: "1987",
+    person: "John M. Carroll & Mary Beth Rosson",
+    personDescription: "Peneliti di IBM",
+    blocks: [
+      img("paradox-of-the-active-user", 1, "Ilustrasi konsep Paradox of the Active User", "Ilustrasi konsep Paradox of the Active User dari Laws of UX.", 1024, 538),
+      t("Pernah beli gadget baru dan langsung nyalain tanpa baca buku manualnya? Atau install aplikasi baru dan langsung klik-klik tanpa baca onboarding-nya? Kamu bukan sendiri, hampir semua orang begitu. Dan itulah Paradox of the Active User."),
+      t("\"Paradox\" nya adalah: user sebenarnya akan lebih efisien kalau mereka berhenti sebentar untuk belajar dulu. Tapi mereka memilih untuk langsung \"nyebur\" karena mereka merasa sudah cukup tau, atau karena mereka ga sabar ingin langsung mulai."),
+      t("Ini punya implikasi besar untuk desain:"),
+      t("Pertama, jangan andalkan manual atau help documentation sebagai penyelamat. Kebanyakan user ga akan baca. Bukan berarti dokumentasi ga penting, tapi jangan bikin desain yang cuma bisa dipahami kalau baca manual."),
+      t("Kedua, bikin interface yang \"self-explanatory.\" Label yang jelas, icon yang intuitif, dan flow yang logis, ini semua membantu user yang langsung \"nyebur\" tanpa baca instruksi."),
+      t("Ketiga, sediakan bantuan yang kontekstual. Daripada manual 50 halaman, lebih baik tooltip kecil yang muncul di saat yang tepat. \"Klik di sini untuk menambah item\" yang muncul di samping tombol \"+ Add\" jauh lebih efektif daripada halaman help center."),
+      t("Keempat, buat error recovery yang baik. Karena user bakal trial-and-error, pastikan mereka bisa undo, bisa kembali ke state sebelumnya, dan error message-nya jelas tentang apa yang salah dan bagaimana memperbaikinya."),
+      t("Intinya, desain untuk user yang tidak sabar, yang langsung klik tanpa baca, dan yang belajar sambil jalan. Karena itu memang mayoritas user."),
+    ],
+    keyPoints: [
+      "User hampir tidak pernah membaca manual, jadi desain harus self-explanatory",
+      "Sediakan bantuan kontekstual (tooltip) daripada dokumentasi panjang",
+      "Buat error recovery yang baik karena user belajar lewat trial-and-error",
+    ],
+  },
+  {
+    slug: "selective-attention",
+    number: 25,
+    category: "psychology",
+    title: "Selective Attention",
+    subtitle:
+      "Kemampuan otak untuk fokus pada informasi tertentu sambil mengabaikan informasi lain yang tidak relevan.",
+    color: "hsl(124, 21%, 40%)",
+    year: "1958",
+    person: "Donald Broadbent",
+    personDescription: "Psikolog Kognitif asal Inggris",
+    blocks: [
+      img("selective-attention", 1, "Ilustrasi konsep Selective Attention", "Ilustrasi konsep Selective Attention dari Laws of UX.", 1024, 538),
+      t("Otak kita setiap detiknya menerima jutaan informasi dari mata, telinga, hidung, dan indera lainnya. Tapi kita ga bisa memproses semuanya sekaligus. Selective Attention adalah mekanisme otak untuk \"menyaring\" dan hanya fokus pada apa yang dianggap penting."),
+      t("Eksperimen paling terkenal tentang ini adalah \"Invisible Gorilla\" oleh Daniel Simons dan Christopher Chabris. Peserta diminta menghitung berapa kali bola basket di-passing. Di tengah video, ada orang pakai kostum gorila jalan lewat. Setengah dari peserta sama sekali tidak melihat gorila itu karena fokus mereka ada di bola basket!"),
+      t("Di dunia UI dan UX, Selective Attention ini punya dampak besar. User yang fokus pada satu task bisa sama sekali tidak melihat elemen lain di halaman, meskipun elemen itu cukup besar dan mencolok."),
+      t("Ini jadi alasan kenapa banner blindness itu nyata. User yang terbiasa melihat iklan di posisi tertentu di website secara otomatis \"menyaring\" area itu dari perhatian mereka. Bahkan konten yang bukan iklan pun bisa diabaikan kalau posisinya mirip posisi iklan."),
+      t("Implikasi untuk desain: jangan letakkan informasi penting di area yang biasanya dipakai untuk iklan atau promosi. Kalau ada notifikasi penting, pastikan desainnya cukup berbeda dari noise visual di sekitarnya supaya bisa \"menembus\" filter Selective Attention user."),
+      t("Ini juga alasan kenapa distraction-free mode di aplikasi writing (seperti iA Writer) efektif. Dengan menghilangkan semua elemen yang tidak relevan, user bisa mengarahkan seluruh Selective Attention mereka ke satu hal: menulis."),
+      t("Sebagai designer, kita harus sadar bahwa user tidak melihat semua yang kita taruh di layar. Mereka melihat apa yang relevan dengan tujuan mereka saat itu, dan mengabaikan sisanya."),
+    ],
+    keyPoints: [
+      "User tidak melihat semua yang ada di layar, hanya yang relevan",
+      "Banner blindness terjadi karena Selective Attention",
+      "Informasi penting harus dibedakan dari noise visual di sekitarnya",
+    ],
+  },
+  {
+    slug: "working-memory",
+    number: 29,
+    category: "psychology",
+    title: "Working Memory",
+    subtitle:
+      "Sistem kognitif dengan kapasitas terbatas yang bertanggung jawab untuk menyimpan dan memanipulasi informasi secara sementara.",
+    color: "hsl(6, 79%, 59%)",
+    year: "1974",
+    person: "Alan Baddeley & Graham Hitch",
+    personDescription: "Psikolog Kognitif",
+    blocks: [
+      img("working-memory", 1, "Ilustrasi konsep Working Memory", "Ilustrasi konsep Working Memory dari Laws of UX.", 1024, 538),
+      t("Working Memory itu ibarat meja kerja di otak kamu. Ukurannya terbatas, kamu cuma bisa naruh beberapa \"berkas\" di atasnya sekaligus. Kalau mejanya penuh, berkas yang lama harus disingkirin dulu sebelum bisa naruh yang baru. Ini berbeda dengan long-term memory yang kayak lemari arsip, kapasitasnya besar tapi butuh waktu untuk nyari dan ngambil sesuatu."),
+      t("Alan Baddeley dan Graham Hitch mengusulkan model Working Memory yang terdiri dari beberapa komponen: Phonological Loop (untuk informasi suara/bahasa), Visuospatial Sketchpad (untuk informasi visual/spasial), dan Central Executive (yang mengatur semuanya)."),
+      t("Kenapa ini penting untuk desain? Karena setiap interaksi user dengan produk digital itu melibatkan Working Memory. Setiap form field yang harus diisi, setiap langkah yang harus diingat, setiap informasi dari halaman sebelumnya yang masih dibutuhkan, semuanya menempati Working Memory."),
+      t("Dan Working Memory itu SANGAT terbatas. Informasi di situ biasanya cuma bertahan 15-30 detik kalau tidak di-rehearse (diulang-ulang). Jadi kalau kamu bikin user mengingat kode verifikasi dari SMS lalu pindah ke aplikasi untuk mengetiknya, kamu sudah memakai sebagian besar Working Memory mereka."),
+      t("Beberapa implikasi praktis untuk desain:"),
+      t("Jangan bikin user harus bolak-balik halaman untuk mengingat informasi. Kalau informasi dari step sebelumnya masih relevan, tampilkan ringkasannya. Jangan paksa user mengingat."),
+      t("Form yang baik mengisi otomatis apa yang bisa diisi otomatis, kode pos dari kota, kota dari provinsi, nama dari login. Setiap field yang bisa diotomasi adalah satu beban Working Memory yang dihilangkan."),
+      t("Copy-paste friendly design itu penting. Kalau user harus memindahkan informasi (kode OTP, nomor referensi, dll), bikin prosesnya semudah mungkin. Autofill OTP dari SMS adalah contoh desain yang sangat menghormati Working Memory user."),
+      t("Intinya, desain yang baik itu yang tidak membebani Working Memory user lebih dari yang diperlukan. Biarkan interface yang mengingat, bukan user-nya."),
+    ],
+    keyPoints: [
+      "Working Memory sangat terbatas, hanya 15-30 detik tanpa pengulangan",
+      "Jangan paksa user mengingat informasi antar halaman",
+      "Otomasi input sebanyak mungkin untuk mengurangi beban memori",
+    ],
+  },
 ];
+
+export const laws: Law[] = [...lawList].sort((a, b) => a.number - b.number);
 
 export function getLawBySlug(slug: string): Law | undefined {
   return laws.find((law) => law.slug === slug);

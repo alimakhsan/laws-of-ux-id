@@ -1,7 +1,7 @@
-# Laws of UX — dalam Bahasa Indonesia
+# Laws of UX dalam Bahasa Indonesia
 
 Kumpulan prinsip-prinsip UX yang perlu dipertimbangkan desainer saat membuat
-antarmuka pengguna — dijelaskan dalam **Bahasa Indonesia** dengan contoh-contoh
+antarmuka pengguna, dijelaskan dalam **Bahasa Indonesia** dengan contoh-contoh
 yang mudah dipahami.
 
 🔗 **Live**: [lawsofuxid.netlify.app](https://lawsofuxid.netlify.app)

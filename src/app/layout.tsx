@@ -16,7 +16,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Laws of UX — dalam Bahasa Indonesia",
+  title: "Laws of UX dalam Bahasa Indonesia",
   description:
     "Kumpulan prinsip-prinsip UX yang perlu dipertimbangkan desainer saat membuat antarmuka pengguna. Dalam Bahasa Indonesia dengan contoh lokal.",
 };
