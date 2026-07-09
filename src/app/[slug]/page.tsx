@@ -4,6 +4,7 @@ import Image from "next/image";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import { laws, getLawBySlug } from "@/lib/laws-data";
 import { BackButton } from "@/components/back-button";
+import { EngagementBar } from "@/components/engagement-bar";
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
 
@@ -35,6 +36,10 @@ export default async function LawPage({
   const prev = currentIndex > 0 ? laws[currentIndex - 1] : null;
   const next = currentIndex < laws.length - 1 ? laws[currentIndex + 1] : null;
 
+  const tweetText = `"${law.subtitle}"\n\n— ${law.title} | Laws of UX ID`;
+  const tweetUrl = `https://lawsofuxid.netlify.app/${law.slug}`;
+  const twitterHref = `https://twitter.com/intent/tweet?text=${encodeURIComponent(tweetText)}&url=${encodeURIComponent(tweetUrl)}`;
+
   return (
     <article className="mx-auto max-w-2xl px-4 sm:px-6 py-10 sm:py-16">
       <div className="animate-fade-in" style={{ "--stagger": 0 } as React.CSSProperties}>
@@ -63,8 +68,15 @@ export default async function LawPage({
       </blockquote>
 
       <div
-        className="animate-enter flex flex-wrap gap-2 mb-8 text-sm text-muted-foreground"
+        className="animate-enter mb-6"
         style={{ "--stagger": 5 } as React.CSSProperties}
+      >
+        <EngagementBar slug={slug} twitterHref={twitterHref} pageUrl={tweetUrl} />
+      </div>
+
+      <div
+        className="animate-enter flex flex-wrap gap-2 mb-8 text-sm text-muted-foreground"
+        style={{ "--stagger": 6 } as React.CSSProperties}
       >
         {law.person && (
           <Badge variant="secondary">{law.person}</Badge>
@@ -77,7 +89,7 @@ export default async function LawPage({
         )}
       </div>
 
-      <Separator className="mb-8 animate-fade-in" style={{ "--stagger": 6 } as React.CSSProperties} />
+      <Separator className="mb-8 animate-fade-in" style={{ "--stagger": 7 } as React.CSSProperties} />
 
       <div className="space-y-5 text-base leading-relaxed text-foreground/90">
         {law.blocks.map((block, i) =>
@@ -85,7 +97,7 @@ export default async function LawPage({
             <p
               key={i}
               className="animate-enter"
-              style={{ "--stagger": Math.min(7 + i, 12), textWrap: "pretty" } as React.CSSProperties}
+              style={{ "--stagger": Math.min(8 + i, 13), textWrap: "pretty" } as React.CSSProperties}
             >
               {block.text}
             </p>
@@ -93,7 +105,7 @@ export default async function LawPage({
             <figure
               key={i}
               className="animate-enter-scale my-8"
-              style={{ "--stagger": Math.min(7 + i, 12) } as React.CSSProperties}
+              style={{ "--stagger": Math.min(8 + i, 13) } as React.CSSProperties}
             >
               <div className="relative aspect-video overflow-hidden rounded-xl bg-muted/30">
                 <iframe
@@ -109,7 +121,7 @@ export default async function LawPage({
             <figure
               key={i}
               className="animate-enter-scale my-8 space-y-2.5"
-              style={{ "--stagger": Math.min(7 + i, 12) } as React.CSSProperties}
+              style={{ "--stagger": Math.min(8 + i, 13) } as React.CSSProperties}
             >
               <div className="overflow-hidden rounded-xl bg-muted/30 img-outline">
                 <Image
