@@ -1,0 +1,8 @@
+name = "laws-of-ux-api"
+main = "src/index.ts"
+compatibility_date = "2025-07-01"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "laws-of-ux-db"
+database_id = "e0c6c70b-a0b7-4c0a-b98f-889aa9604e46"
