@@ -7,6 +7,11 @@ export type ContentBlock =
       caption?: string;
       width: number;
       height: number;
+    }
+  | {
+      type: "youtube";
+      videoId: string;
+      title?: string;
     };
 
 export interface Law {
@@ -765,6 +770,7 @@ const lawList: Law[] = [
     person: "Kenneth Craik",
     personDescription: "Psikolog asal Skotlandia",
     blocks: [
+      { type: "youtube", videoId: "yY96hTb8WgI", title: "Mental Model" },
       t("Mental Model itu kayak \"peta\" di kepala kita tentang bagaimana sesuatu seharusnya bekerja. Kita semua punya mental model, tentang cara kerja pintu, cara pakai lift, cara belanja online, dll. Mental model ini terbentuk dari pengalaman kita sebelumnya."),
       t("Contoh simpel: kamu lihat gagang pintu yang bentuknya kayak pegangan. Mental model kamu bilang \"ini harus ditarik.\" Tapi ternyata pintunya harus didorong. Frustasi kan? Itu karena desainnya ga sesuai mental model kamu. (Ini juga dikenal sebagai \"Norman Door\", pintu yang desainnya membingungkan.)"),
       t("Di dunia UI dan UX, Mental Model sangat penting. User datang ke aplikasi kamu dengan mental model yang sudah terbentuk dari pengalaman mereka pakai aplikasi lain. Keranjang belanja harus ada di pojok kanan atas (karena hampir semua ecommerce naruhnya di situ). Logo harus bisa diklik buat balik ke homepage. Swipe kiri untuk hapus."),
